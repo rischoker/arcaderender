@@ -1,13 +1,13 @@
 # Rischoker Arcade
 
-Hub de juegos (pantalla de inicio estilo consola) para lanzar Chicken Horde, Gato Swing y Battle City 3D.
+Hub de juegos (pantalla de inicio estilo consola) para lanzar Chicken Horde, Gato Swing, Battle City 3D y Flappy Verbs.
 
 ## Publicar en Render (Static Site)
 
 - **Build Command:**
 
 ```
-git clone --depth 1 https://github.com/rischoker/Battlecity.git battlecity && git clone --depth 1 https://github.com/rischoker/planetcat.git planetcat && git clone --depth 1 https://github.com/rischoker/ChickenHorde.git chickenhorde && rm -rf */.git
+git clone --depth 1 https://github.com/rischoker/Battlecity.git battlecity && git clone --depth 1 https://github.com/rischoker/planetcat.git planetcat && git clone --depth 1 https://github.com/rischoker/ChickenHorde.git chickenhorde && git clone --depth 1 https://github.com/rischoker/flappyverbs.git flappyverbs && rm -rf */.git
 ```
 
 - **Publish Directory:** `.`
@@ -18,6 +18,7 @@ Al publicar, Render descarga la última versión de cada juego y queda todo en u
 - `/battlecity/` → Battle City 3D
 - `/planetcat/` → Gato Swing
 - `/chickenhorde/?host=1` → Chicken Horde
+- `/flappyverbs/` → Flappy Verbs
 
 ## Agregar un juego
 
