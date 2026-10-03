@@ -14,6 +14,7 @@ clone Battlecity   battlecity
 clone planetcat    planetcat
 clone ChickenHorde chickenhorde
 clone flappyverbs  flappyverbs
+clone wordclimbers wordclimbers
 
 # Juegos con servidor
 clone castlequest  apps/castlequest

@@ -9,6 +9,7 @@ Hub de juegos estilo consola + servidor que sirve todos los juegos desde un solo
 | `/planetcat/` | Gato Swing | estático |
 | `/battlecity/` | Battle City 3D | estático |
 | `/flappyverbs/` | Flappy Verbs | estático |
+| `/wordclimbers/` | Word Climbers | estático |
 | `/castlequest/` | Castle Quest | con servidor (celulares en `/play`) |
 
 ## Publicar en Render (Web Service)
