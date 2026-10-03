@@ -150,6 +150,16 @@ html,body{height:100%;overflow:hidden;background:#05060d;color:var(--txt);font-f
 .playing .twinkle{animation:blink 1.4s infinite}
 .playing .qmark{animation:bob 1s ease-in-out infinite alternate}
 
+/* ---------- Cinta "ACTUALIZADO" y versión ---------- */
+.card .upd{position:absolute;top:12px;right:-8px;z-index:3;padding:5px 12px 5px 10px;font:800 clamp(9px,1.2vh,12px)/1 var(--font);letter-spacing:.1em;color:#04310f;
+  border-radius:7px 0 0 7px;background:linear-gradient(180deg,#d7ffd9 0%,#6cf27d 45%,#19b13a 100%);box-shadow:0 0 0 1px rgba(255,255,255,.7) inset,0 3px 10px rgba(0,0,0,.45),0 0 16px rgba(80,255,120,.55);animation:updPulse 1.8s ease-in-out infinite}
+.card .upd::after{content:"";position:absolute;right:0;bottom:-8px;border-left:8px solid #0b6a22;border-bottom:8px solid transparent}
+@keyframes updPulse{50%{box-shadow:0 0 0 1px rgba(255,255,255,.7) inset,0 3px 10px rgba(0,0,0,.45),0 0 26px rgba(80,255,120,.9)}}
+.info .ver{margin-top:8px;font-size:clamp(12px,1.6vh,15px);opacity:.75;display:flex;align-items:center;gap:8px}
+.info .ver b{font-weight:600;opacity:1}
+.info .ver.fresh{opacity:1;color:#9dffad}
+.info .ver i{width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor}
+
 /* ---------- Brillo al pasar de juego ---------- */
 .card .shine{position:absolute;inset:0;border-radius:inherit;overflow:hidden;pointer-events:none}
 .card .shine::after{content:"";position:absolute;top:-20%;bottom:-20%;width:45%;left:-70%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-18deg)}
@@ -237,6 +247,7 @@ body.lite .card.sel .ring{animation:none}
   <h1 class="fade" id="title"></h1>
   <div class="tags fade" id="tags"></div>
   <p class="fade" id="desc"></p>
+  <p class="ver fade" id="ver"></p>
 </section>
 
 <nav class="dock">
@@ -499,6 +510,29 @@ GAMES.forEach((g,i)=>{
 });
 const cards=[...track.children];
 
+/* --- Versiones: build.sh genera versions.json con el último commit de cada juego --- */
+const UPDATED_DAYS = 3;                       // cuántos días se muestra la cinta "ACTUALIZADO"
+let VERS = {};
+const folderOf = g => (g.url||"").split(/[?#]/)[0].replace(/\/+$/,"").split("/").pop().toLowerCase();
+const verOf = g => g.url ? VERS[folderOf(g)] : null;
+const isFresh = v => v && (Date.now()-new Date(v.date)) < UPDATED_DAYS*864e5;
+function whenText(d){
+  const day=x=>{const t=new Date(x); t.setHours(0,0,0,0); return t;};
+  const n=Math.round((day(Date.now())-day(d))/864e5), hr=d.toLocaleTimeString("es-CO",{hour:"numeric",minute:"2-digit"});
+  return n<=0?`hoy, ${hr}`:n===1?`ayer, ${hr}`:n<7?`hace ${n} días`:d.toLocaleDateString("es-CO",{day:"numeric",month:"short",year:"numeric"});
+}
+function verLine(g){
+  const el=$("#ver"), v=verOf(g);
+  if(!v){ el.innerHTML=""; el.className="ver fade"; return; }
+  el.className="ver fade"+(isFresh(v)?" fresh":"");
+  el.innerHTML=`<i></i>Actualizado <b>${whenText(new Date(v.date))}</b> · versión ${v.hash}`;
+}
+function applyVersions(){
+  cards.forEach((c,i)=>{ c.querySelector(".upd")?.remove(); if(isFresh(verOf(GAMES[i]))) c.insertAdjacentHTML("beforeend",'<div class="upd">ACTUALIZADO</div>'); });
+  verLine(GAMES[sel]);
+}
+fetch("versions.json",{cache:"no-store"}).then(r=>r.ok?r.json():{}).then(v=>{ VERS=v||{}; applyVersions(); }).catch(()=>{});
+
 /* --- selección --- */
 function select(i,recenter=true){
   i=Math.max(0,Math.min(GAMES.length-1,i));
@@ -518,6 +552,7 @@ function select(i,recenter=true){
   setTimeout(()=>{
     $("#title").textContent=g.name;
     $("#desc").textContent=g.desc||"";
+    verLine(g);
     $("#tags").innerHTML=(g.tags||[]).map(t=>`<span class="tag">${t}</span>`).join("");
     info.classList.remove("swap");
   },changed?180:0);

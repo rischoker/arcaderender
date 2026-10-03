@@ -53,6 +53,8 @@ const proxies = APPS.map(a => {
     pathFilter: (p) => owns(p.split('?')[0]),
     pathRewrite: (p) => p.startsWith(a.mount) ? (p.slice(a.mount.length) || '/') : p,
     on: {
+      // Que el navegador siempre revise si hay versión nueva (evita ver el juego viejo tras un deploy)
+      proxyRes: (proxyRes) => { proxyRes.headers['cache-control'] = 'no-cache'; },
       error: (err, req, res) => {
         if (res && res.writeHead && !res.headersSent) { res.writeHead(503, { 'Content-Type': 'text/html; charset=utf-8' }); res.end(waking(a.name)); }
         else if (res && res.destroy) res.destroy();
@@ -70,7 +72,8 @@ app.use((req, res, next) => PRIVATE.test(decodeURIComponent(req.path)) ? res.sta
 // Hub y juegos estáticos (la raíz del repo)
 app.use(express.static(__dirname, { dotfiles: 'ignore',
   extensions: ['html'],
-  setHeaders: (res, file) => { res.setHeader('Cache-Control', file.endsWith('.html') ? 'no-cache' : 'public, max-age=3600'); },
+  // no-cache = el navegador revisa con el servidor (respuesta 304 rápida si nada cambió)
+  setHeaders: (res) => { res.setHeader('Cache-Control', 'no-cache'); },
 }));
 
 const server = http.createServer(app);
