@@ -1,0 +1,116 @@
+#PARTS
+sign | KET Part 1 · Notices & messages | 1.5
+reply | KET · Conversations | 1.1
+cloze | KET Part 4 · Vocabulary cloze | 1
+grammar | KET Part 5 · Grammar | 1
+verbs | Verb forms | 1
+#QUESTIONS
+sign | NOTICE: "Swimming pool closed for cleaning until Thursday." | You can swim again from Thursday. | The pool is cleaned every Thursday. | You must clean the pool before swimming. | The pool is only open on Thursdays.
+sign | NOTICE: "Students must not use phones during the exam." | Phones are not allowed in the exam. | Students need a phone for the exam. | You can call the teacher during the exam. | The exam is about phones.
+sign | NOTICE: "Lost: black cat with white feet. Please call Tim – 555 0172." | Tim wants help finding his cat. | Tim found a black cat. | Tim is selling a cat. | Tim's cat has black feet.
+sign | MESSAGE: "Mum, I'll be home late – football practice finishes at 7. Leo" | Leo will get home after 7. | Leo doesn't have practice today. | Leo's mum must pick him up at 7. | Leo is playing football at home.
+sign | NOTICE: "Café – Buy two coffees, get a cake free!" | You get a free cake with two coffees. | Cakes are free for everyone. | Coffee is free with a cake. | You must buy two cakes.
+sign | NOTICE: "Library books must be returned within 14 days." | You can keep a book for two weeks. | You can borrow 14 books. | The library is open 14 days a month. | Books cost 14 dollars.
+sign | NOTICE: "Please leave your bags at reception before entering the museum." | Don't take your bag into the museum. | You can buy bags at reception. | Bags are free at the museum. | Reception is inside the museum.
+sign | MESSAGE: "Sara – the cinema's full tonight. Can we go tomorrow instead? Kim" | Kim wants to change the day. | Kim has two tickets for tonight. | Kim doesn't want to go to the cinema. | Kim is at the cinema now.
+sign | NOTICE: "Bus 42 does not stop here on Sundays." | You can't catch the 42 here on Sunday. | The 42 only runs on Sundays. | Bus 42 is always late. | Bus 42 stops here every day.
+sign | NOTICE: "School trip: bring a packed lunch and wear comfortable shoes." | Students need to take food. | Lunch will be provided on the trip. | Students must buy new shoes. | There is no trip this week.
+sign | NOTICE: "Sale! Everything half price this weekend only." | Things cost 50% less on Saturday and Sunday. | The shop is closed this weekend. | Prices go up this weekend. | The sale lasts all month.
+sign | MESSAGE: "Dad – I've borrowed your umbrella. I'll give it back tonight. Ana" | Ana has her father's umbrella. | Ana lost her umbrella. | Ana wants to buy an umbrella. | Ana's dad needs to borrow an umbrella.
+sign | NOTICE: "Lift out of order. Please use the stairs." | You must walk up. | The stairs are closed. | The lift is working again. | Order your food here.
+sign | NOTICE: "Children under 12 must be with an adult." | Young children can't come alone. | Adults must be under 12. | Only children can come in. | Children pay $12.
+reply | "Would you like a drink?" | Yes, please. Some orange juice. | Yes, I would like it yesterday. | No, I don't drink it now usually. | I like.
+reply | "How long does it take to get to school?" | About twenty minutes. | It's very long. | By bus, please. | Since 2019.
+reply | "Have you ever been to Mexico?" | No, never. | No, I haven't gone yesterday. | Yes, I go. | I was in.
+reply | "Can you help me with this box?" | Sure, no problem. | Yes, you can. | It's a box. | I'm helping yesterday.
+reply | "What does your brother look like?" | He's tall with dark hair. | He likes football. | He's fine, thanks. | He looks at TV.
+reply | "Shall we meet at the station?" | OK, what time? | Yes, we shall met. | I don't station. | It's far, thanks.
+reply | "I've got a terrible headache." | Oh no! Do you want an aspirin? | Congratulations! | That's a good idea. | You're welcome.
+reply | "Excuse me, is this seat free?" | Yes, sit down. | It costs nothing. | No, I'm free. | Free time is great.
+reply | "What are you doing this weekend?" | I'm visiting my grandparents. | I visited my grandparents. | I visit them since Monday. | At the weekend.
+reply | "How much are these shoes?" | They're 40 dollars. | They're size 38. | They're very much. | They're black.
+reply | "I passed my driving test!" | Well done! | Never mind. | Bad luck! | Me neither.
+reply | "Do you mind if I open the window?" | No, go ahead. | Yes, please open. | I don't mind it closed open. | Window, please.
+reply | "Why don't we go swimming?" | That sounds fun! | Because it's Tuesday. | I don't know why. | Yes, we don't.
+reply | "How often do you go to the gym?" | Twice a week. | For two hours. | Two years ago. | At the gym.
+cloze | I'm going to ___ a cake for my mum's birthday. | make | do | take | have
+cloze | Can you ___ me the time, please? | tell | say | speak | talk
+cloze | We ___ a great time at the party. | had | made | did | took
+cloze | Please ___ off your shoes before you come in. | take | put | get | make
+cloze | I always ___ my homework after dinner. | do | make | take | have
+cloze | It's very ___ today – wear a jacket. | windy | sunny | hot | dry
+cloze | My flight ___ off at 6 a.m. | takes | gets | goes | puts
+cloze | Can I ___ your pen for a minute? | borrow | lend | give | keep
+cloze | Could you ___ me some money until Friday? | lend | borrow | pay | spend
+cloze | The film was so ___ that I fell asleep. | boring | bored | exciting | funny
+cloze | I'm ___ in science. It's my favorite subject. | interested | interesting | boring | bored
+cloze | He ___ the bus every morning at 7:15. | catches | takes up | goes | drives on
+cloze | She ___ a photo of the sunset. | took | made | did | got
+cloze | You should ___ a doctor about that cough. | see | look | watch | meet up
+cloze | Don't forget to ___ the lights when you leave. | turn off | turn on | turn up | turn into
+cloze | We stayed in a small ___ near the beach. | hotel | station | airport | hospital
+cloze | I need to ___ some money from the cash machine. | take out | take off | take up | take on
+cloze | My brother ___ in a bank. He's a cashier. | works | does | makes | jobs
+cloze | It's a long ___ from Bogotá to Madrid. | flight | travel | trip of flying | voyage boat
+cloze | What's on ___ tonight? | TV | radio show | the cinema film | television program
+cloze | I'd like to ___ a table for two, please. | book | buy | order | pay
+cloze | Our teacher ___ us a lot of homework. | gives | does | makes | takes
+grammar | I ___ to the cinema last weekend. | went | go | have gone | was go
+grammar | She ___ in London since 2020. | has lived | lives | lived | is living
+grammar | ___ you ever eaten sushi? | Have | Did | Do | Are
+grammar | We ___ dinner when the phone rang. | were having | had | have | are having
+grammar | This is the ___ film I've ever seen! | best | better | good | most good
+grammar | Paris is ___ than Rome. (expensive) | more expensive | expensiver | most expensive | expensive
+grammar | I'm not as tall ___ my brother. | as | than | like | that
+grammar | There isn't ___ milk in the fridge. | any | some | many | a
+grammar | How ___ sugar do you take in your coffee? | much | many | lot | few
+grammar | I'll call you ___ I arrive. | when | while | during | since
+grammar | He didn't come ___ he was ill. | because | so | but | although
+grammar | You ___ wear a uniform at my school. It's a rule. | must | can | might | would
+grammar | You ___ bring food. There's a café there. (it's not necessary) | don't have to | mustn't | can't | shouldn't to
+grammar | Look at those clouds! It ___ rain. | is going to | will to | goes | is raining to
+grammar | The boy ___ won the race is my cousin. | who | which | where | whose
+grammar | That's the restaurant ___ we had lunch. | where | which | who | when
+grammar | I'm good ___ drawing. | at | in | on | for
+grammar | She's afraid ___ dogs. | of | from | at | with
+grammar | We arrived ___ the airport late. | at | to | in to | on
+grammar | Let's meet ___ Friday afternoon. | on | in | at | by
+grammar | If it rains, we ___ at home. | will stay | stayed | would stay | staying
+grammar | I've ___ finished my homework. Can I go out? | just | yet | ever | still
+grammar | Have you finished ___? | yet | just | already ever | still
+verbs | I'm tired. I ___ well last night. | didn't sleep | don't sleep | wasn't sleep | haven't slept yet
+verbs | He usually ___ coffee, but today he's drinking tea. | drinks | is drinking | drink | drank
+verbs | Past simple of "buy" | bought | buyed | brought | buy
+verbs | Past simple of "bring" | brought | bringed | bought | brang
+verbs | Past simple of "teach" | taught | teached | thought | tought
+verbs | Past simple of "think" | thought | thinked | taught | thank
+verbs | Past simple of "write" | wrote | writed | written | writ
+verbs | Past participle of "speak" | spoken | spoke | speaked | speak
+verbs | Past participle of "break" | broken | broke | breaked | brake
+verbs | I enjoy ___ to music. | listening | listen | to listen | listened
+verbs | I want ___ a new phone. | to buy | buying | buy | bought
+verbs | Stop ___ ! I'm trying to work. | talking | to talk | talk | talked
+verbs | She decided ___ a taxi. | to take | taking | take | took
+verbs | They ___ football when it started to rain. | were playing | played | are playing | have played
+verbs | Next summer we ___ to Cartagena. We've bought the tickets. | are going | go | went | have gone
+#GOLDEN
+grammar | Write ONE word: "I have lived here ___ 2018." | since
+grammar | Write ONE word: "She has worked here ___ five years." | for
+grammar | Write ONE word: "Have you finished your homework ___?" | yet
+grammar | Write ONE word: "This is the man ___ helped me." | who / that
+grammar | Write ONE word: "There aren't ___ eggs left." | any
+grammar | Write ONE word: "My sister is taller ___ me." | than
+grammar | Write ONE word: "I'm interested ___ history." | in
+grammar | Write ONE word: "We ___ going to visit Grandma tomorrow." | are / 're
+verbs | Past simple of "catch" | caught
+verbs | Past simple of "fly" | flew
+verbs | Past participle of "write" | written
+verbs | Past participle of "eat" | eaten
+verbs | Past simple of "fall" | fell
+cloze | Write the word: a person who flies planes | pilot
+cloze | Write the word: the room where you take a shower | bathroom
+cloze | Write the opposite of "cheap" | expensive
+cloze | Write the word: the meal you eat in the evening | dinner / supper
+cloze | Write ONE word: "Don't forget to turn ___ the lights." | off
+grammar | Write the superlative: bad → the ___ | worst
+grammar | Write the comparative: far → ___ | farther / further

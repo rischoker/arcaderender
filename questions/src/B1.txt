@@ -1,0 +1,125 @@
+#PARTS
+message | PET Part 1 · Short messages | 1.6
+cloze | PET Part 5 · Multiple-choice cloze | 1.1
+open | PET Part 6 · Open cloze | 1.1
+phrasal | Phrasal verbs | 1
+tenses | Verb tenses | 1.1
+compare | Comparisons | 1
+#QUESTIONS
+message | EMAIL: "Hi Jo, the concert's been moved from Friday to Saturday, same time. Still OK for you? – Max" Why is Max writing? | to check Jo can come on a different day | to invite Jo to a new concert | to cancel the concert completely | to change the start time
+message | NOTICE: "Gym members: the pool will be closed for repairs this week. The sauna remains open as usual." | Members can still use the sauna. | The whole gym is closed this week. | The sauna is being repaired. | The pool opens later than usual.
+message | TEXT: "Running 15 mins late – start the meeting without me and I'll catch up. Dan" | Dan wants the others to begin before he arrives. | Dan has cancelled the meeting. | Dan wants to change the meeting time. | Dan won't come to the meeting.
+message | NOTICE: "Tickets can be refunded up to 48 hours before the performance." | You can get your money back if you ask two days early. | Tickets cost 48 dollars. | The performance lasts 48 hours. | You can't get a refund.
+message | EMAIL: "Thanks for the invitation! I'd love to come, but I'm away that weekend. Next time?" | The writer is refusing politely. | The writer is accepting the invitation. | The writer is inviting someone. | The writer is asking for directions.
+message | LABEL: "Keep refrigerated. Consume within 3 days of opening." | Eat it soon after you open it. | Don't put it in the fridge. | It lasts three weeks once open. | Open it within three days of buying it.
+message | NOTICE: "Volunteers needed to help at the school fair. No experience necessary." | Anyone can offer to help. | You need experience to help. | Volunteers will be paid. | The fair has been cancelled.
+message | TEXT: "Mum says you can borrow the car, but fill it up with petrol before you bring it back." | The car must be returned with a full tank. | Mum needs petrol now. | You can't borrow the car. | The car is broken.
+message | NOTICE: "Late homework will only be accepted with a note from parents." | Students need a parent's note if homework is late. | Parents must do the homework. | No late homework is accepted at all. | Homework is due on parents' day.
+message | EMAIL: "I've attached the photos from the trip. Let me know if you can't open them." | The writer is sending pictures. | The writer wants the reader's photos. | The writer couldn't open the photos. | The writer is planning a trip.
+message | NOTICE: "Cyclists must dismount on this bridge." | You must walk with your bike here. | Bikes are not allowed in the city. | Cyclists must ride faster. | The bridge is only for bikes.
+message | TEXT: "Can't find my keys – did I leave them at yours last night? Pls check! Ella" | Ella thinks her keys might be at her friend's house. | Ella found her friend's keys. | Ella wants to borrow some keys. | Ella left her keys at work.
+cloze | I didn't ___ the bus, so I had to walk home. | catch | take up | get on with | reach
+cloze | Can you ___ an eye on my bag while I go to the toilet? | keep | have | hold | put
+cloze | She ___ a mistake in the last question. | made | did | had | took
+cloze | The weather was terrible, so they ___ the match. | cancelled | removed | lost | stopped off
+cloze | I'm really looking forward ___ seeing you. | to | for | at | of
+cloze | It's important to ___ attention in class. | pay | give | take | make
+cloze | He ___ his exam because he hadn't studied. | failed | lost | missed | dropped
+cloze | We ___ our holiday in a small village in the mountains. | spent | passed | used | took up
+cloze | The hotel ___ a beautiful view of the sea. | has | makes | does | holds up
+cloze | It's ___ a long time since I last saw her. | been | gone | had | done
+cloze | Please ___ in touch while you're abroad. | keep | stay at | hold | make
+cloze | He doesn't ___ any attention to what I say. | pay | give | do | make
+cloze | I couldn't ___ my mind which dress to buy. | make up | take up | do up | set up
+cloze | The museum is ___ visiting – it's fantastic. | worth | value | useful | good for
+cloze | There was a long ___ of people outside the cinema. | queue | line up | group | crowd line
+cloze | They ___ me to bring a jacket because it might get cold. | advised | suggested | said | explained
+cloze | The ___ of living in big cities is very high. | cost | price | value | money
+cloze | I'm sorry, I didn't ___ to break your glass. | mean | want to say | think | hope
+cloze | She works as a ___ in a busy restaurant kitchen. | chef | cooker | kitchener | cookist
+cloze | The concert was a huge ___ – everyone loved it. | success | win | victory | prize
+cloze | Can you ___ me a favor? | do | make | give | take
+cloze | He ___ to be a famous singer, but nobody knows him. | claims | says | tells | speaks
+open | I've been waiting ___ over an hour! | for | since | during | from
+open | She's lived in Medellín ___ she was a child. | since | for | from | during
+open | ___ it was raining, we went for a walk. | Although | Because | Despite | However
+open | We went out ___ the rain. | despite | although | even | but
+open | The film ___ we saw last night was brilliant. | that | who | what | where
+open | He's the only person ___ can help us. | who | which | whose | whom he
+open | I don't know ___ she will come or not. | whether | if not | that | what
+open | You can borrow my bike ___ long as you're careful. | as | so | such | while
+open | I'm not used ___ getting up so early. | to | for | of | with
+open | Neither Tom ___ Sara came to the party. | nor | or | and | but
+open | She was ___ tired that she fell asleep on the bus. | so | such | very much | too much
+open | It was ___ a good film that I watched it twice. | such | so | very | too
+open | Let's leave early ___ that we don't miss the train. | so | in case | because | unless
+open | Take an umbrella ___ case it rains. | in | on | for | at
+open | I'll lend you the money ___ you pay me back next week. | if | unless | although | whether
+open | He apologized ___ being late. | for | of | about to | with
+phrasal | We've ___ of milk. Can you buy some? | run out | run away | run into | run over
+phrasal | Please ___ the form and give it back to me. | fill in | fill up | fill out of | fill on
+phrasal | I'll ___ you up at the airport at 6. | pick | take | get | bring
+phrasal | Could you ___ the music down? I'm trying to sleep. | turn | put | set | take
+phrasal | She ___ up smoking last year. Good for her! | gave | put | took | turned
+phrasal | My grandmother ___ me up when my parents were working abroad. | brought | grew | took | gave
+phrasal | Don't ___ up! You're nearly there! | give | put | get | take
+phrasal | Can you ___ after my dog this weekend? | look | take | see | care
+phrasal | I ___ into an old friend at the supermarket. | ran | went | came | fell
+phrasal | The plane ___ off two hours late. | took | went | got | set
+phrasal | We need to ___ out how to fix this. | figure | make | take | look
+phrasal | I ___ on really well with my cousin. | get | go | come | take
+phrasal | Let's ___ off the meeting until next week. | put | take | set | turn
+phrasal | Can you ___ up this word in the dictionary? | look | find | search | see
+phrasal | The alarm ___ off at 5 a.m. and woke everyone. | went | took | set | put
+phrasal | I'm going to ___ up yoga. I need to relax. | take | make | give | pick out
+phrasal | The car ___ down on the motorway. | broke | went | fell | turned
+phrasal | I'm really ___ forward to the holidays. | looking | seeing | waiting | hoping
+tenses | By the time we arrived, the film ___. | had already started | already started | has already started | was already start
+tenses | I ___ English for three years now. | have been studying | study | am studying | studied
+tenses | This time tomorrow I ___ on the beach. | will be lying | have lain | lie | was lying
+tenses | When I was a child, I ___ climb trees every day. | used to | use to | was used to | am used to
+tenses | If I ___ more money, I would travel the world. | had | have | would have | will have
+tenses | If you heat ice, it ___. | melts | will melted | melted | would melt yesterday
+tenses | The bridge ___ in 1890. | was built | built | is built | has build
+tenses | English ___ in many countries around the world. | is spoken | speaks | is speaking | spoke
+tenses | She asked me where I ___. | lived | did I live | do I live | did live I
+tenses | He said he ___ come to the party. | would | is | can't to | has
+tenses | I wish I ___ play the guitar. | could | can | will | would can
+tenses | You ___ have seen her – she's in Japan right now. | can't | mustn't | shouldn't | needn't to
+tenses | I'm sure they ___ be at home – the lights are on. | must | can't | mustn't | should to
+tenses | We ___ go to school tomorrow. It's a holiday! | don't have to | mustn't | haven't | can't to
+tenses | How long ___ you known each other? | have | did | do | are
+tenses | I ___ my keys. I can't find them anywhere! | have lost | had lost | lose | am losing
+compare | This exercise is ___ than the last one. | easier | more easy | easyer | easiest
+compare | She's the ___ student in the class. | most intelligent | more intelligent | intelligentest | much intelligent
+compare | My new phone is much ___ than my old one. | better | more good | best | gooder
+compare | The more you practice, the ___ you get. | better | best | good | more better
+compare | Today isn't ___ cold as yesterday. | as | so much | than | like
+compare | He runs ___ than his brother. | faster | more fast | fastly | more faster
+compare | This is ___ interesting book I've ever read. | the most | more | the more | most of
+compare | Trains are ___ comfortable than buses. | more | most | much | the more
+compare | My house is ___ from school than yours. | further | furthest | more far | farest
+compare | It's getting ___ and ___ difficult. | more / more | most / most | much / much | the / the
+compare | She sings ___ than anyone I know. | more beautifully | more beautiful | beautifuller | most beautifully
+compare | This is the ___ day of my life! | worst | baddest | worse | most bad
+#GOLDEN
+open | Write ONE word: "I've been learning English ___ I was eight." | since
+open | Write ONE word: "She's not used ___ living alone." | to
+open | Write ONE word: "It was ___ a hot day that we stayed inside." | such
+open | Write ONE word: "Take a map in ___ you get lost." | case
+open | Write ONE word: "Neither my brother ___ I can swim." | nor
+open | Write ONE word: "He's the man ___ car was stolen." | whose
+open | Write ONE word: "You can go out as ___ as you're home by ten." | long
+phrasal | Write ONE word: "We've run ___ of sugar." | out
+phrasal | Write ONE word: "Could you look ___ my cat while I'm away?" | after
+phrasal | Write ONE word: "I get ___ well with my neighbors." | on / along
+tenses | Write the passive: "They built this house in 1950." → This house ___ built in 1950. | was
+tenses | Write the correct form: "If I ___ (be) you, I'd study more." | were / was
+tenses | Write the correct form: "She ___ (live) here since 2015." | has lived / has been living / 's lived
+compare | Write the comparative: "This bag is ___ (heavy) than that one." | heavier
+compare | Write the superlative: "It's the ___ (good) pizza in town." | best
+cloze | Write the noun from "explain": "Can you give me an ___?" | explanation
+cloze | Write the noun from "arrive": "the ___ of the train" | arrival
+cloze | Write the adjective from "danger": a ___ road | dangerous
+cloze | Write the adjective from "comfort": a ___ chair | comfortable
+cloze | Write the noun from "decide": I made a ___. | decision

@@ -1,0 +1,139 @@
+#PARTS
+p1 | FCE Part 1 · Multiple-choice cloze | 1.1
+p2 | FCE Part 2 · Open cloze | 1.1
+p3 | FCE Part 3 · Word formation | 1.2
+p4 | FCE Part 4 · Key word transformation | 1.9
+phrasal | Phrasal verbs | 1
+grammar | Grammar | 1.1
+#QUESTIONS
+p1 | The company has ___ a decision to close two of its stores. | reached | done | put | given
+p1 | She ___ a strong influence on her younger brother. | has | makes | does | takes
+p1 | It's hard to ___ a balance between work and family life. | strike | hit | catch | win
+p1 | The new law will ___ into effect next month. | come | go | get | bring
+p1 | He ___ no attempt to hide his disappointment. | made | did | gave | took
+p1 | We need to ___ into account the cost of transport. | take | put | make | have
+p1 | Heavy rain ___ the outdoor concert to be cancelled. | caused | made | resulted | led
+p1 | The museum attracts a ___ number of visitors every year. | large | big amount | wide | great deal
+p1 | I'd like to ___ my thanks to everyone who helped. | express | say | tell | speak
+p1 | She has a ___ memory and never forgets a face. | remarkable | considerable | numerous | plentiful
+p1 | The film ___ on a true story. | is based | is founded | is set | is built
+p1 | Our team ___ the match 3–1. | won | beat | earned | gained
+p1 | Our team ___ their rivals 3–1. | beat | won | earned | succeeded
+p1 | Can you ___ me to call the dentist tomorrow? | remind | remember | recall | memorize
+p1 | The price ___ breakfast, so you don't pay extra. | includes | contains | consists | involves
+p1 | He was ___ of stealing the money, but he was innocent. | accused | blamed | charged with | suspected for
+p1 | Scientists have ___ a breakthrough in cancer research. | made | done | taken | had
+p1 | The meeting has been ___ until next Thursday. | postponed | delayed for | cancelled to | prevented
+p1 | She ___ her exam with flying colours. | passed | succeeded | achieved | managed
+p1 | Please don't ___ me wrong – I like your idea. | get | take | make | have
+p1 | They ___ a fortune by selling their app. | made | won | gained up | earned up
+p1 | It's no ___ crying over it now. | use | point to | worth | value
+p1 | The hotel was ___ to the beach – just two minutes' walk. | close | near by | beside | nearly
+p1 | I ___ to see the manager immediately! | demand | require | claim | insist
+p1 | The village is in a ___ area, far from any town. | remote | distant from | far | isolated from
+p2 | ___ the bad weather, the match went ahead. | Despite | Although | However | Even
+p2 | I'd rather you ___ tell anyone about this. | didn't | don't | won't | not
+p2 | It's high time we ___ home. | went | go | will go | have gone
+p2 | Hardly ___ I sat down when the phone rang. | had | did | was | have
+p2 | No ___ how hard I try, I can't remember her name. | matter | way | mind | doubt
+p2 | He spoke quietly so ___ not to wake the baby. | as | that | to | much
+p2 | She's one of the ___ talented musicians I know. | most | more | much | best
+p2 | ___ you need help, just call me. | Should | Would | Could | Shall
+p2 | I can't afford a car, let ___ a house. | alone | apart | only | aside
+p2 | There's no point ___ arguing about it. | in | of | to | for
+p2 | We'll have to go, ___ we like it or not. | whether | if | either | unless
+p2 | It was ___ last minute that he decided to come. | at the | in the | on the | to the
+p2 | ___ to the forecast, it will snow tonight. | According | Depending | Regarding | Owing
+p2 | She succeeded ___ getting the job. | in | on | at | to
+p2 | Not ___ did he win, but he broke the record. | only | just | even | merely so
+p2 | I'll help you, ___ long as you help me later. | as | so much | such | while
+p2 | They insisted ___ paying for dinner. | on | in | to | at
+p2 | It's worth ___ the extra money for a good pair of shoes. | spending | to spend | spend | spent
+p3 | She spoke with great ___ about the problem. (CONFIDENT) | confidence | confidential | confident | confidently
+p3 | The ___ of the new bridge took three years. (CONSTRUCT) | construction | constructive | constructor | constructing
+p3 | It's ___ to drive without a licence. (LEGAL) | illegal | unlegal | dislegal | inlegal
+p3 | His ___ to help surprised everyone. (WILLING) | willingness | willingly | unwilling | willful
+p3 | The instructions were completely ___. (UNDERSTAND) | incomprehensible | ununderstandable | misunderstand | understanding
+p3 | We were impressed by the ___ of the scenery. (BEAUTIFUL) | beauty | beautify | beautifully | beauteous
+p3 | She is very ___ – she always tells the truth. (HONEST) | honest | honesty | honestly | dishonesty
+p3 | The ___ of the competition will receive a prize. (WIN) | winner | winning | winnings | winful
+p3 | There has been a ___ increase in prices. (DRAMA) | dramatic | dramatical | dramatize | dramatist
+p3 | He felt a sense of ___ after the exam. (RELIEVE) | relief | relieve | relieving | relieved
+p3 | Please make your ___ quickly. (CHOOSE) | choice | chose | chosen | choosy
+p3 | It was ___ of him to forget your birthday. (THINK) | thoughtless | thinkless | unthinking of | thoughtful
+p3 | The ___ of the city has grown rapidly. (POPULATE) | population | popularity | populous | populated
+p3 | Her ___ in the race was unexpected. (SUCCEED) | success | succession | successor | successive
+p3 | The hotel staff were extremely ___. (HELP) | helpful | helpless | helping | helper
+p3 | Smoking can ___ your health. (DANGER) | endanger | dangerize | dangerous | danger
+p3 | There's a ___ of rain this afternoon. (POSSIBLE) | possibility | possibly | possible | impossibly
+p3 | He was ___ late for every meeting. (CONTINUE) | continually | continual | continuation | continuous
+p3 | Their ___ lasted for over fifty years. (FRIEND) | friendship | friendliness | friendly | befriend
+p3 | The museum has a ___ collection of paintings. (MAGNIFICENCE) | magnificent | magnificently | magnify | magnified
+p3 | We need to ___ the road to reduce traffic. (WIDE) | widen | widely | width | wideness
+p3 | Her ___ was the best in the class. (PERFORM) | performance | performer | performing | performative
+p4 | "I haven't seen Tom for ages." (LAST) → I ___ ages ago. | last saw Tom | lastly saw Tom | saw Tom last for | have last seen Tom
+p4 | "It's possible that she missed the train." (MAY) → She ___ the train. | may have missed | may missed | may be missing | may miss it
+p4 | "I regret not studying harder." (WISH) → I ___ harder. | wish I had studied | wish I studied | wish to study | wish I would study
+p4 | "They say he is very rich." (SAID) → He ___ very rich. | is said to be | is said being | said to be | is saying to be
+p4 | "It wasn't necessary for us to bring food." (NEED) → We ___ food. | didn't need to bring | needn't bringing | don't need bring | needed not bring
+p4 | "Someone stole my bike yesterday." (HAD) → I ___ yesterday. | had my bike stolen | had stolen my bike | had my bike steal | had been stolen my bike
+p4 | "He started working here five years ago." (BEEN) → He ___ here for five years. | has been working | had been working | been working | was been working
+p4 | "I'd prefer to stay at home tonight." (RATHER) → I ___ at home tonight. | would rather stay | would rather to stay | rather stay | would rather staying
+p4 | "The film was so boring that I fell asleep." (SUCH) → It ___ that I fell asleep. | was such a boring film | was such boring film | was so a boring film | such was a boring film
+p4 | "You should apologize to her." (BETTER) → You ___ to her. | had better apologize | had better to apologize | better had apologize | would better apologize
+p4 | "Although it rained, we enjoyed the trip." (SPITE) → We enjoyed the trip ___ rain. | in spite of the | in spite the | despite of the | in spite that
+p4 | "It's not worth complaining." (POINT) → There's ___ complaining. | no point in | not point to | no point to | none point of
+p4 | "I'm sure she didn't take the money." (CAN'T) → She ___ the money. | can't have taken | can't take | can't had taken | can't be taken
+p4 | "Nobody told me about the meeting." (WAS) → I ___ about the meeting. | wasn't told | was told not | wasn't telling | was not tell
+p4 | "Do you mind if I open the window?" (OBJECT) → Do you ___ the window? | object to my opening | object to open | object my opening | object for opening
+p4 | "It's ages since I last went to the beach." (BEEN) → I ___ to the beach for ages. | haven't been | hadn't been | haven't gone been | wasn't been
+p4 | "She didn't come because she was ill." (OWING) → She didn't come ___ illness. | owing to her | owing her | owing for her | owe to her
+p4 | "I can't wait to see you." (FORWARD) → I'm really ___ you. | looking forward to seeing | looking forward to see | looking forward seeing | forward looking to see
+phrasal | The negotiations ___ down after three days. | broke | fell | went | turned
+phrasal | I can't ___ up with this noise any longer! | put | get | keep | stand
+phrasal | We need to ___ up with a better plan. | come | go | get | make
+phrasal | She ___ after her mother – they're very similar. | takes | looks | goes | comes
+phrasal | The match was called ___ because of the storm. | off | out | up | down
+phrasal | He ___ out to be a really nice guy. | turned | came | went | worked
+phrasal | Prices have gone ___ again. Everything is more expensive. | up | over | through | on
+phrasal | I'll have to ___ up on my French before the trip. | brush | clean | wash | dust
+phrasal | They ___ out a survey to find out what customers think. | carried | took | made | did
+phrasal | Can you ___ me through the process step by step? | talk | speak | tell | say
+phrasal | The thief ___ away with all the jewellery. | got | took | went off | came
+phrasal | I don't know how she ___ up with his behaviour. | puts | gets | keeps | takes
+phrasal | We ___ across an amazing little restaurant by chance. | came | went | ran over | got
+phrasal | The fire alarm ___ off during the exam. | went | set | took | put
+phrasal | The government plans to ___ down on illegal parking. | crack | break | cut out | shut
+grammar | If I ___ about the traffic, I would have left earlier. | had known | knew | would know | have known
+grammar | By next June, she ___ her degree. | will have finished | will finish already | finishes | has finished
+grammar | He denied ___ the window. | breaking | to break | break | to have broke
+grammar | I'm used to ___ up early now. | getting | get | got | have got
+grammar | The children were made ___ their rooms. | to tidy | tidy | tidying | tidied
+grammar | She suggested ___ to the cinema. | going | to go | us to go | go
+grammar | I remember ___ him at a party years ago. | meeting | to meet | meet | met
+grammar | Remember ___ the door when you leave! | to lock | locking | lock | locked
+grammar | Unless you ___, you'll miss the bus. | hurry | don't hurry | will hurry | hurried not
+grammar | The report ___ by the time the boss arrived. | had been finished | has been finished | was finishing | had finished by
+grammar | She's the woman ___ husband is a famous chef. | whose | who's | that | which
+grammar | I'd rather ___ at home tonight. | stay | to stay | staying | stayed
+#GOLDEN
+p3 | Word formation (SUCCEED): "She was ___ in her new career." | successful
+p3 | Word formation (DECIDE): "He's very ___ and can't choose anything." | indecisive
+p3 | Word formation (APPEAR): "The ___ of the magician surprised the kids." | appearance
+p3 | Word formation (RESPONSIBLE): "Leaving the door open was very ___." | irresponsible
+p3 | Word formation (ACHIEVE): "Winning the prize was a great ___." | achievement
+p3 | Word formation (STRONG): "We need to ___ the walls." | strengthen
+p3 | Word formation (EMPLOY): "Many ___ lost their jobs." | employees
+p3 | Word formation (PATIENT): "He waited ___ for an hour." | patiently
+p2 | Write ONE word: "___ of the students passed the test – it was too hard." | none / few
+p2 | Write ONE word: "I can't swim, let ___ dive." | alone
+p2 | Write ONE word: "Hardly ___ we arrived when it started raining." | had
+p2 | Write ONE word: "She's not ___ tall as her sister." | as / so
+p2 | Write ONE word: "There's no point ___ waiting." | in
+p4 | KWT (LAST): "I haven't seen him for years." → I ___ years ago. (3 words) | last saw him
+p4 | KWT (SAID): "People say she is a genius." → She ___ a genius. (4 words) | is said to be
+p4 | KWT (RATHER): "I'd prefer to walk." → I ___ walk. (2 words) | would rather / 'd rather
+p4 | KWT (MAY): "Perhaps he forgot." → He ___ forgotten. (2 words) | may have
+phrasal | Write ONE word: "The meeting was called ___ due to the storm." | off
+phrasal | Write ONE word: "I can't put ___ with this noise." | up
+phrasal | Write ONE word: "She takes ___ her father – same eyes, same smile." | after

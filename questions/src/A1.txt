@@ -1,0 +1,145 @@
+#PARTS
+vocab | Vocabulary | 1
+grammar | Grammar | 1
+sign | Signs & notices | 1.3
+reply | Short conversations | 1.1
+read | Read & choose | 1.3
+#QUESTIONS
+# formato: parte | pregunta | correcta | incorrecta | incorrecta | incorrecta
+vocab | You read books in a ___. | library | kitchen | garden | bathroom
+vocab | A cat has four ___. | legs | arms | hands | wings
+vocab | The opposite of "big" is ___. | small | tall | long | fat
+vocab | The opposite of "hot" is ___. | cold | warm | wet | dark
+vocab | We sleep in a ___. | bed | chair | table | sink
+vocab | You cook food in the ___. | kitchen | bedroom | garage | classroom
+vocab | Which one is a fruit? | banana | carrot | bread | cheese
+vocab | Which one is an animal? | horse | apple | table | river
+vocab | Which one is a color? | purple | Monday | happy | window
+vocab | Which one is a day of the week? | Thursday | August | Winter | Morning
+vocab | Which one is a month? | October | Sunday | Autumn | Evening
+vocab | You see with your ___. | eyes | ears | nose | mouth
+vocab | You hear with your ___. | ears | eyes | feet | hands
+vocab | Your mother's mother is your ___. | grandmother | aunt | sister | cousin
+vocab | Your father's brother is your ___. | uncle | cousin | nephew | grandfather
+vocab | A doctor works in a ___. | hospital | farm | shop | school bus
+vocab | A teacher works in a ___. | school | hospital | restaurant | bank
+vocab | It's raining. Take your ___. | umbrella | sunglasses | swimsuit | kite
+vocab | It's cold. Put on your ___. | coat | shorts | sandals | T-shirt
+vocab | We drink ___ when we are thirsty. | water | bread | rice | soup spoons
+vocab | Ten plus five is ___. | fifteen | fifty | five | twelve
+vocab | Twenty minus eight is ___. | twelve | eleven | twenty-eight | eight
+vocab | Which one can fly? | bird | fish | cow | snake
+vocab | Which one lives in the sea? | shark | lion | monkey | camel
+vocab | You wear shoes on your ___. | feet | hands | head | arms
+vocab | You wear a hat on your ___. | head | feet | knees | back
+vocab | Breakfast is in the ___. | morning | night | evening | afternoon
+vocab | Which one is a drink? | juice | pizza | sandwich | cake
+vocab | Which one is a sport? | football | piano | chess board | pencil
+vocab | Which one do you use to write? | pen | spoon | ball | sock
+vocab | You buy food at the ___. | supermarket | library | post office | museum
+vocab | A baby cat is a ___. | kitten | puppy | calf | chick
+vocab | A baby dog is a ___. | puppy | kitten | lamb | foal
+vocab | The first meal of the day is ___. | breakfast | lunch | dinner | dessert
+vocab | Which word is a job? | pilot | piano | pizza | pillow
+vocab | Snow is ___. | white | black | green | orange
+vocab | There are seven days in a ___. | week | month | year | day
+vocab | There are twelve months in a ___. | year | week | day | season
+grammar | I ___ ten years old. | am | is | are | be
+grammar | She ___ a teacher. | is | am | are | be
+grammar | They ___ my friends. | are | is | am | be
+grammar | ___ you like pizza? | Do | Does | Are | Is
+grammar | ___ she have a brother? | Does | Do | Is | Are
+grammar | He ___ football every Saturday. | plays | play | playing | to play
+grammar | I ___ like spiders. | don't | doesn't | isn't | aren't
+grammar | My sister ___ like milk. | doesn't | don't | isn't | aren't
+grammar | There ___ a cat on the bed. | is | are | am | be
+grammar | There ___ three books on the table. | are | is | am | has
+grammar | This is ___ apple. | an | a | the a | two
+grammar | I have ___ dog and two cats. | a | an | any | some of
+grammar | Look at ___ birds in the sky! | those | that | this | it
+grammar | The book is ___ the table. | on | at | to | of
+grammar | My birthday is ___ May. | in | on | at | to
+grammar | The party is ___ Saturday. | on | in | at | of
+grammar | School starts ___ eight o'clock. | at | in | on | to
+grammar | One child, two ___. | children | childs | childrens | childes
+grammar | One mouse, three ___. | mice | mouses | mices | mousies
+grammar | One box, two ___. | boxes | boxs | boxies | box
+grammar | This is Tom. ___ is my brother. | He | She | It | They
+grammar | This is ___ bag. (It belongs to me.) | my | me | I | mine is
+grammar | ___ is your name? | What | Who | Where | How
+grammar | ___ do you live? — In Bogotá. | Where | What | Who | When
+grammar | ___ old are you? | How | What | Who | Which
+grammar | ___ is that man? — He's my dad. | Who | What | Where | How
+grammar | I can ___ very fast. | run | runs | running | to run
+grammar | Can you swim? — Yes, I ___. | can | do | am | swim
+grammar | She is ___ a book now. | reading | read | reads | to read
+grammar | Listen! The baby ___. | is crying | cry | cries | crying
+grammar | Yesterday I ___ to the park. | went | go | goes | going
+grammar | Last night we ___ TV. | watched | watch | watches | watching
+grammar | He ___ very happy yesterday. | was | were | is | be
+grammar | They ___ at school yesterday. | were | was | are | is
+grammar | My house is ___ than your house. | bigger | big | biggest | more big
+grammar | An elephant is ___ than a dog. | heavier | heavy | heaviest | more heavy
+grammar | ___ your hands before lunch! | Wash | Washes | Washing | To washing
+grammar | How ___ apples do you want? | many | much | any | lot
+grammar | How ___ is this T-shirt? — It's $10. | much | many | old | long
+grammar | I've got ___ brothers. (no brothers) | no | any | not | some
+grammar | Is this pen ___? — Yes, it's mine. | yours | you | your | you're
+sign | Sign: "NO SWIMMING". What does it mean? | You can't swim here. | You must swim here. | The pool is open. | Swimming lessons today.
+sign | Sign: "CLOSED ON SUNDAYS". What does it mean? | You can't go in on Sunday. | It's open only on Sunday. | It's open every day. | It closes at night.
+sign | Sign: "PLEASE BE QUIET". Where can you see it? | in a library | at a football match | at a party | in a playground
+sign | Sign: "EXIT". What does it mean? | the way out | the way in | the toilet | the stairs up
+sign | Sign: "DON'T FEED THE ANIMALS". Where can you see it? | at the zoo | in a restaurant | in a classroom | at the bank
+sign | Sign: "WET PAINT". What does it mean? | Don't touch, it's not dry. | Paint this wall. | Paint for sale. | The wall is old.
+sign | Sign: "PUSH". What do you do? | Push the door to open it. | Pull the door. | Ring the bell. | Wait here.
+sign | Sign: "BUS STOP". What happens here? | People wait for the bus. | People buy buses. | The bus is broken. | Buses are washed here.
+sign | Sign: "TICKETS: $5 CHILDREN, $8 ADULTS". A child pays… | five dollars | eight dollars | thirteen dollars | nothing
+sign | Sign: "OPEN 9:00–17:00". When can you go in? | in the afternoon | at 8 in the morning | at 8 at night | at midnight
+sign | Sign: "KEEP OFF THE GRASS". What does it mean? | Don't walk on the grass. | Cut the grass. | Sit on the grass. | Water the grass.
+sign | Sign: "NO PHONES IN CLASS". What does it mean? | Don't use your phone in the classroom. | Bring your phone to class. | Phones are for sale. | Call the teacher.
+reply | "How are you?" | I'm fine, thanks. | I'm ten. | I'm from Peru. | It's blue.
+reply | "What's your favorite color?" | Green. | Pizza. | On Monday. | Yes, I do.
+reply | "Where are you from?" | I'm from Colombia. | I'm twelve. | I'm happy. | It's my bag.
+reply | "Can I have some water, please?" | Here you are. | You're welcome to Peru. | I'm water. | No, it's Monday.
+reply | "Thank you very much!" | You're welcome. | Yes, please. | I'm sorry. | Good night, thanks.
+reply | "What time is it?" | It's three o'clock. | It's Tuesday. | It's sunny. | It's in May.
+reply | "Do you have a pet?" | Yes, a dog. | Yes, a sister. | Yes, I am. | Yes, at home.
+reply | "Whose bag is this?" | It's Anna's. | It's red. | It's big. | It's on the chair.
+reply | "What's the weather like?" | It's sunny. | It's Friday. | It's my coat. | It's ten o'clock.
+reply | "Let's play football!" | Good idea! | I'm fine. | It's mine. | Twelve.
+reply | "When is your birthday?" | In June. | In the kitchen. | I'm eleven. | With my mom.
+reply | "Sorry, I'm late." | That's OK. | You're welcome. | Me too, thanks. | Nice to meet you.
+reply | "Nice to meet you." | Nice to meet you too. | I'm sorry. | Yes, I can. | Good idea.
+reply | "How do you spell your name?" | M-A-R-I-A. | It's Maria's. | I'm Maria's sister. | Maria is ten.
+read | "Tom has a red bike. His sister has a blue bike." What color is Tom's bike? | red | blue | green | yellow
+read | "Sara gets up at 7. She has breakfast at 7:30." When does Sara get up? | at seven | at half past seven | at eight | at six
+read | "Ben likes apples but he doesn't like bananas." What doesn't Ben like? | bananas | apples | oranges | grapes
+read | "My cat is under the bed. My dog is in the garden." Where is the dog? | in the garden | under the bed | on the bed | in the kitchen
+read | "Lucy is 9. Her brother is 3 years older." How old is her brother? | 12 | 6 | 9 | 3
+read | "On Mondays, Paul plays tennis. On Fridays, he swims." What does Paul do on Friday? | He swims. | He plays tennis. | He plays football. | He reads.
+read | "We have a big kitchen and two small bedrooms." How many bedrooms? | two | one | three | four
+read | "Mia's favorite animal is the giraffe because it's very tall." Why does Mia like giraffes? | They are tall. | They are small. | They are fast. | They can fly.
+read | "It's Saturday. Jack is at the beach with his family." Where is Jack? | at the beach | at school | at home | at the park
+read | "Anna can play the guitar, but she can't play the piano." What can Anna play? | the guitar | the piano | the drums | the violin
+#GOLDEN
+# formato: parte | pregunta | respuesta aceptada / otra aceptada
+grammar | Write the missing word: "She ___ my best friend." | is
+grammar | Write the plural: one man, two ___ | men
+grammar | Write the plural: one foot, two ___ | feet
+grammar | Write the plural: one tooth, many ___ | teeth
+grammar | Past tense of "go": Yesterday I ___ to school. | went
+grammar | Past tense of "eat": Last night we ___ pizza. | ate
+grammar | Past tense of "see": I ___ a big dog yesterday. | saw
+vocab | Write the opposite of "old" (for things): an ___ car | new
+vocab | Write the opposite of "happy" | sad / unhappy
+vocab | Write the number: 7 + 6 = ___ (in letters) | thirteen
+vocab | Write the day after Monday | Tuesday
+vocab | Write the month after March | April
+vocab | Write the animal: it says "moo" and gives us milk | cow
+vocab | Write the color: mix black and white | grey / gray
+grammar | Write the missing word: "There ___ two cats in the garden." | are
+grammar | Write the missing word: "I ___ got a new bike." | have / 've
+grammar | Write the comparative: tall → ___ | taller
+grammar | Write the comparative: good → ___ | better
+grammar | Write the missing word: "___ you swim? — Yes, I can." | Can
+vocab | Write the word: you use it to cut paper | scissors

@@ -1,0 +1,123 @@
+#PARTS
+p1 | CAE Part 1 · Multiple-choice cloze | 1.2
+p2 | CAE Part 2 · Open cloze | 1.2
+p3 | CAE Part 3 · Word formation | 1.3
+p4 | CAE Part 4 · Key word transformation | 2
+idiom | Idioms & collocations | 1.1
+grammar | Advanced grammar | 1.2
+#QUESTIONS
+p1 | The new policy has ___ widespread criticism from teachers. | drawn | pulled | brought about | dragged
+p1 | Her argument doesn't ___ water – there's no evidence for it. | hold | keep | carry | bear
+p1 | The project was ___ by a lack of funding. | hampered | hindered from | obstructed to | restrained of
+p1 | He has a ___ interest in politics. | keen | sharp | acute | eager
+p1 | The two companies have ___ forces to develop the product. | joined | linked | merged | united up
+p1 | The scandal ___ serious doubts about his honesty. | raised | rose | arose | aroused up
+p1 | She was ___ aware that she was being watched. | acutely | sharply | keenly to | heavily
+p1 | The results ___ the theory that sleep improves memory. | bear out | carry out | make out | point out
+p1 | Public transport in the city leaves a lot to be ___. | desired | wished | wanted | hoped
+p1 | It goes without ___ that safety comes first. | saying | telling | speaking | mentioning
+p1 | His comments ___ a nerve with many listeners. | struck | hit | touched off | beat
+p1 | The government came under ___ pressure to resign. | mounting | climbing | rising up | ascending
+p1 | They ___ no expense to make the wedding perfect. | spared | saved | spent | kept
+p1 | The theory has ___ the test of time. | stood | resisted | survived through | withstood up
+p1 | Her performance was ___ short of brilliant. | nothing | anything | little | nowhere
+p1 | The company is ___ to announce record profits. | poised | placed | set off | posed
+p1 | The decision was taken in the ___ of the moment. | heat | warmth | fire | rush
+p1 | He made a ___ recovery after the accident. | remarkable | notorious | flagrant | prominent
+p1 | We were caught ___ by the sudden announcement. | off guard | out of guard | under guard | on guard
+p1 | The plan was ___ to failure from the start. | doomed | condemned | sentenced | fated by
+p2 | ___ had the concert started than the lights went out. | No sooner | Hardly | Scarcely | Barely
+p2 | Little ___ they know what was about to happen. | did | had | were | do they
+p2 | ___ it not been for your help, I would have failed. | Had | Were | Should | If
+p2 | ___ the circumstances, I think we did well. | Given | Giving | Provided | Despite of
+p2 | Under no circumstances ___ you open this door. | should | you should | must you to | ought
+p2 | She left the party early, ___ was a pity. | which | that | what | it
+p2 | It's not so much the price ___ the quality that worries me. | as | than | but | that
+p2 | ___ clever the plan was, it was impossible to carry out. | However | Although | Despite | Whereas
+p2 | ___ as it may seem, I actually enjoy exams. | Strange | Strangely | Stranger | However strange
+p2 | He's, ___ all accounts, a brilliant teacher. | by | from | on | at
+p2 | So ___ was the storm that the flights were cancelled. | severe | severely | severity | much severe
+p2 | Only after the meeting ___ the truth. | did I realise | I realised | had I realise | realised I
+p2 | She talks as ___ she knew everything. | if | so | like that | as
+p2 | ___ for the rain, we would have gone hiking. | But | Except | Unless | Without
+p2 | He is reluctant to commit himself one way or the ___. | other | another | others | either
+p2 | We had barely sat down ___ the waiter arrived. | when | than | that | then
+p3 | The ___ of the evidence was questioned in court. (RELY) | reliability | reliance | reliably | reliant
+p3 | His speech was full of ___ statements. (LEAD) | misleading | leading out | unleaded | leaderful
+p3 | The new manager is known for her ___. (DECISIVE) | decisiveness | decision | indecisive | decisively
+p3 | Students must show ___ commitment to the course. (WAVER) | unwavering | wavering | waverless | unwaveringly
+p3 | There's a growing ___ that we need change. (AWARE) | awareness | unaware | awarely | awaring
+p3 | The documentary gives an ___ account of the war. (BIAS) | unbiased | biasless | dibiased | biasful
+p3 | His ___ behaviour got him into trouble again. (RESPONSIBLE) | irresponsible | unresponsible | disresponsible | inresponsible
+p3 | The team showed great ___ under pressure. (RESILIENT) | resilience | resiliency of | resilient | resiliently
+p3 | The film's ending was totally ___. (PREDICT) | unpredictable | unpredicted of | predictive | imprediction
+p3 | We need to ___ our dependence on fossil fuels. (LESS) | lessen | lesser | unless | lessening of
+p3 | Her ___ to detail is impressive. (ATTEND) | attention | attendance | attendant | attentive
+p3 | The ___ of the two companies was announced today. (MERGE) | merger | merging of | mergence | merged
+p3 | His theory was considered highly ___. (CONTROVERSY) | controversial | controversive | controverted | controversially
+p3 | They live in ___ poverty. (DESPAIR) | desperate | despairing of | desperation | despaired
+p3 | It's ___ to argue with him – he never listens. (POINT) | pointless | pointful | unpointed | pointlessly
+p3 | The ___ of the castle took decades. (RESTORE) | restoration | restorement | restoring of | restorative
+p3 | His ___ was obvious from his face. (DISAPPOINT) | disappointment | disappointing | undisappointed | disappointedly
+p3 | The rules are ___ – no exceptions. (NEGOTIATE) | non-negotiable | unnegotiated | negotiable | negotiator
+p4 | "I didn't realise how late it was." (IDEA) → I ___ how late it was. | had no idea | had not idea | didn't have idea | have had no idea
+p4 | "They will probably cancel the match." (LIKELY) → The match ___ cancelled. | is likely to be | is likely being | likely will be | is likely be
+p4 | "She didn't mention the problem at all." (REFERENCE) → She ___ the problem. | made no reference to | made no reference about | did no reference to | gave no reference of
+p4 | "You must not tell anyone under any circumstances." (ACCOUNT) → On ___ anyone. | no account must you tell | no account you must tell | any account must you tell | no account must tell
+p4 | "I only realised the truth later." (UNTIL) → It ___ that I realised the truth. | wasn't until later | was until later | wasn't later until | not until later was
+p4 | "He's sure to win the race." (BOUND) → He ___ the race. | is bound to win | is bound winning | bound to win | is bound for winning
+p4 | "People believe the painting was stolen." (BELIEVED) → The painting ___ stolen. | is believed to have been | is believed to be | believed to have been | is believed that was
+p4 | "I'm sorry I was so rude." (APOLOGISE) → I ___ so rude. | apologise for being | apologise to be | apologise being | apologise for to be
+p4 | "It's my opinion that he's lying." (CONCERNED) → As ___, he's lying. | far as I'm concerned | long as I'm concerned | far as concerned | much as I'm concerned
+p4 | "The concert was cancelled because of the storm." (RESULT) → The concert was cancelled ___ the storm. | as a result of | as result of | in result of | as a result from
+p4 | "I'd never seen such a beautiful place." (NEVER) → Never ___ such a beautiful place. | had I seen | I had seen | have I seen ever | did I had seen
+p4 | "We couldn't have succeeded without your help." (HAD) → If you ___ helped us, we wouldn't have succeeded. | hadn't | had | haven't | didn't
+p4 | "It doesn't matter what you say, I won't change my mind." (MATTER) → No ___ say, I won't change my mind. | matter what you | matter you | matters what you | matter how you
+p4 | "She is extremely proud of her achievements." (PRIDE) → She ___ her achievements. | takes great pride in | takes great pride of | has great pride on | makes great pride in
+idiom | Learning the new software was a ___ of cake. | piece | slice | bit | part
+idiom | I'm feeling a bit under the ___ today – I might have a cold. | weather | sky | rain | climate
+idiom | Let's not beat about the ___. Tell me the truth. | bush | tree | field | garden
+idiom | That restaurant costs an arm and a ___. | leg | hand | foot | finger
+idiom | You hit the ___ on the head – that's exactly the problem. | nail | hammer | point | target
+idiom | We'll cross that ___ when we come to it. | bridge | road | river | line
+idiom | He let the ___ out of the bag about the surprise party. | cat | dog | secret | bird
+idiom | She's been burning the midnight ___ to finish her thesis. | oil | candle | light | fire
+idiom | I'll take your advice with a ___ of salt. | pinch | grain | spoon | bit
+idiom | The final exam is just around the ___. | corner | street | block | edge
+idiom | Don't put all your eggs in one ___. | basket | box | bag | nest
+idiom | It's a ___ in the dark – we have no idea if it'll work. | shot | jump | step | walk
+idiom | He's always ___ a blind eye to his son's behaviour. | turning | closing | putting | making
+idiom | That joke went ___ my head – I didn't understand it. | over | above | through | past
+idiom | They're on the same ___ about the project. | page | line | book | level
+idiom | She ___ the ice with a funny story. | broke | cracked | melted | opened
+grammar | Were I ___ the truth, I'd tell you. | to know | knowing | know | known
+grammar | It's essential that he ___ on time. | be | is being | will be | would
+grammar | I'd sooner you ___ smoke in here. | didn't | don't | won't | not to
+grammar | Not until the end of the film ___ who the killer was. | did we discover | we discovered | had we discover | we did discover
+grammar | She must ___ working all night – she looks exhausted. | have been | be been | had been | having been
+grammar | He is thought ___ the country last week. | to have left | to leave | having left | that he left
+grammar | Such ___ his anger that he couldn't speak. | was | is being | did | had
+grammar | The more I learn, ___ I realise I know. | the less | less | the least | lesser
+grammar | ___ he arrived, the meeting had already finished. | By the time | Until | As soon | Since when
+grammar | I'd rather you ___ me earlier. | had told | told | have told | would tell
+#GOLDEN
+p3 | Word formation (RELY): "The train service is very ___." | unreliable / reliable
+p3 | Word formation (COMPREHEND): "His handwriting is ___." | incomprehensible
+p3 | Word formation (SIGNIFY): "There was a ___ improvement in her grades." | significant
+p3 | Word formation (ACCESS): "The village is only ___ by boat." | accessible
+p3 | Word formation (PERSUADE): "She was very ___ in the debate." | persuasive
+p3 | Word formation (ENTHUSIASM): "They welcomed us ___." | enthusiastically
+p3 | Word formation (HESITATE): "He accepted without ___." | hesitation
+p2 | Write ONE word: "No ___ had I arrived than the phone rang." | sooner
+p2 | Write ONE word: "Little ___ she know about the surprise." | did
+p2 | Write ONE word: "___ it not been for you, I'd have failed." | Had
+p2 | Write ONE word: "Strange ___ it may seem, I love exams." | as / though
+p2 | Write ONE word: "On no ___ should you touch that button." | account
+p4 | KWT (BOUND): "She'll certainly win." → She ___ win. (3 words) | is bound to / 's bound to
+p4 | KWT (UNTIL): "I only noticed it later." → It ___ later that I noticed it. (3 words) | wasn't until / was not until
+p4 | KWT (IDEA): "I didn't know he was married." → I ___ he was married. (3 words) | had no idea
+idiom | Write ONE word: "That's the last ___ – I'm leaving!" | straw
+idiom | Write ONE word: "Let's call it a ___ and go home." | day
+idiom | Write ONE word: "She's as cool as a ___." | cucumber
+grammar | Write ONE word: "It's vital that she ___ informed immediately." | be
+grammar | Write ONE word: "He is said ___ have been a spy." | to
