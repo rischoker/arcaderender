@@ -1,31 +1,35 @@
 # Rischoker Arcade
 
-Hub de juegos (pantalla de inicio estilo consola) para lanzar Chicken Horde, Gato Swing, Battle City 3D y Flappy Verbs.
+Hub de juegos estilo consola + servidor que sirve todos los juegos desde un solo dominio de Render:
 
-## Publicar en Render (Static Site)
+| Ruta | Juego | Tipo |
+|---|---|---|
+| `/` | Hub (menú) | estático |
+| `/chickenhorde/?host=1` | Chicken Horde | estático |
+| `/planetcat/` | Gato Swing | estático |
+| `/battlecity/` | Battle City 3D | estático |
+| `/flappyverbs/` | Flappy Verbs | estático |
+| `/castlequest/` | Castle Quest | con servidor (celulares en `/play`) |
 
-- **Build Command:**
+## Publicar en Render (Web Service)
 
-```
-git clone --depth 1 https://github.com/rischoker/Battlecity.git battlecity && git clone --depth 1 https://github.com/rischoker/planetcat.git planetcat && git clone --depth 1 https://github.com/rischoker/ChickenHorde.git chickenhorde && git clone --depth 1 https://github.com/rischoker/flappyverbs.git flappyverbs && rm -rf */.git
-```
+- **New → Blueprint** y eliges este repo (Render lee `render.yaml`), o bien **New → Web Service** con:
+  - **Build Command:** `bash build.sh`
+  - **Start Command:** `node server.js`
+  - **Health Check Path:** `/health`
+- **Environment** (opcional, para la clasificación mundial de Castle Quest): `SUPABASE_URL` y `SUPABASE_KEY`.
 
-- **Publish Directory:** `.`
+`build.sh` descarga la última versión de cada juego desde GitHub en cada despliegue.
 
-Al publicar, Render descarga la última versión de cada juego y queda todo en un solo dominio:
+## Actualizar los juegos
 
-- `/` → hub
-- `/battlecity/` → Battle City 3D
-- `/planetcat/` → Gato Swing
-- `/chickenhorde/?host=1` → Chicken Horde
-- `/flappyverbs/` → Flappy Verbs
+Haz push al repo del juego y luego, en Render: **Manual Deploy → Deploy latest commit**.
 
 ## Agregar un juego
 
-1. En `index.html`, copia un bloque dentro de `GAMES` y cambia nombre, `url`, colores e imágenes.
-2. Agrega su `git clone` al Build Command de Render.
-3. Pon sus imágenes en `img/` (portada vertical 3:4, logo con transparencia y arte 16:9 de fondo).
+- **Estático:** agrega una línea `clone <repo> <carpeta>` en `build.sh` y su bloque en `GAMES` dentro de `index.html`.
+- **Con servidor:** agrega `clone <repo> apps/<carpeta>` (y su `npm install`) en `build.sh`, y un bloque en `APPS` dentro de `server.js` con su puerto y las rutas que usa.
 
-## Actualizar
+## Plan gratis
 
-Cuando hagas cambios en un juego, en Render pulsa **Manual Deploy → Deploy latest commit**.
+El servicio se duerme tras 15 minutos sin visitas y tarda cerca de un minuto en despertar. Abre el arcade un minuto antes de la clase.
