@@ -11,7 +11,7 @@ Hub de juegos estilo consola + servidor que sirve todos los juegos desde un solo
 | `/flappyverbs/` | Flappy Verbs | estático |
 | `/wordclimbers/` | Word Climbers | estático |
 | `/castlequest/` | Castle Quest | con servidor (celulares en `/play`) |
-| `efl-duel-arena.onrender.com` | Duel Arena | servicio aparte en Render (el hub solo enlaza y lo despierta) |
+| `/duelarena/` | Duel Arena | con servidor (celulares en `/duelarena/play.html`) |
 
 ## Publicar en Render (Web Service)
 

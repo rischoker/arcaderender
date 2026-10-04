@@ -44,8 +44,13 @@ if [ -d apps/castlequest ]; then
   (cd apps/castlequest && npm install --omit=dev --no-audit --no-fund) || { echo "!! castlequest: falló npm install, se omite"; rm -rf apps/castlequest; FAILED="$FAILED castlequest"; }
 fi
 
-# Juegos en su propio servicio de Render (solo versión para la cinta "ACTUALIZADO")
-version_only DuelArena duelarena
+clone DuelArena    apps/duelarena
+if [ -d apps/duelarena ]; then
+  (cd apps/duelarena && npm install --omit=dev --no-audit --no-fund) || { echo "!! DuelArena: falló npm install, se omite"; rm -rf apps/duelarena; FAILED="$FAILED DuelArena"; }
+fi
+
+# Juegos en su propio servicio de Render (solo versión para la cinta "ACTUALIZADO"), por ejemplo:
+# version_only NombreDelRepo clave
 
 # Versión de cada juego (el hub muestra "ACTUALIZADO" en la tarjeta)
 echo "{${VERSIONS%,}}" > versions.json

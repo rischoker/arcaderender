@@ -21,6 +21,10 @@ const APPS = [
     name: 'Castle Quest', dir: 'apps/castlequest', port: 3101, mount: '/castlequest',
     routes: ['/play', '/j/', '/ws', '/api/', '/qr.svg', '/assets/', '/vendor/', '/js/', '/shared/', '/host.html', '/phone.html'],
   },
+  {
+    name: 'Duel Arena', dir: 'apps/duelarena', port: 3102, mount: '/duelarena',
+    routes: ['/socket.io/'],   // socket.io siempre se conecta a /socket.io en la raíz
+  },
 ];
 
 const children = [];
