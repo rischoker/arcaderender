@@ -11,6 +11,7 @@ Hub de juegos estilo consola + servidor que sirve todos los juegos desde un solo
 | `/flappyverbs/` | Flappy Verbs | estático |
 | `/wordclimbers/` | Word Climbers | estático |
 | `/castlequest/` | Castle Quest | con servidor (celulares en `/play`) |
+| `efl-duel-arena.onrender.com` | Duel Arena | servicio aparte en Render (el hub solo enlaza y lo despierta) |
 
 ## Publicar en Render (Web Service)
 
@@ -21,6 +22,10 @@ Hub de juegos estilo consola + servidor que sirve todos los juegos desde un solo
 - **Environment** (opcional, para la clasificación mundial de Castle Quest): `SUPABASE_URL` y `SUPABASE_KEY`.
 
 `build.sh` descarga la última versión de cada juego desde GitHub en cada despliegue.
+
+## Si un juego falla al descargar
+
+`build.sh` lo omite y el resto del arcade se publica igual. Al final del log aparece `!! Juegos omitidos en este deploy: …`.
 
 ## Actualizar los juegos
 
