@@ -206,6 +206,34 @@ html,body{height:100%;overflow:hidden;background:#05060d;color:var(--txt);font-f
 /* ---------- Modo ligero (PCs lentos) ---------- */
 body.lite .bg .art{filter:blur(22px) brightness(.5);transform:scale(1.1)}
 body.lite .aurora,body.lite .bubbles{display:none}
+/* ---------- Apoyo (Vaki): botón discreto + tarjeta flotante ---------- */
+.support-btn{all:unset;cursor:pointer;display:flex;align-items:center;gap:7px;padding:6px 14px;border-radius:999px;font:600 clamp(12px,1.7vh,16px)/1 var(--font);
+  background:linear-gradient(180deg,rgba(255,214,107,.35),rgba(255,138,61,.15) 55%,rgba(255,138,61,.25));border:1px solid rgba(255,220,150,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 3px rgba(0,0,0,.6);transition:transform .15s}
+.support-btn:hover{transform:translateY(-2px)}
+.support-btn i{font-style:normal}
+#vaki{position:fixed;z-index:14;right:clamp(16px,3vw,40px);bottom:clamp(110px,15vh,150px);width:min(384px,calc(100vw - 32px));padding:12px 16px 14px;border-radius:22px;
+  background:linear-gradient(180deg,rgba(40,48,90,.92),rgba(16,20,44,.95));border:1px solid rgba(255,255,255,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 24px 60px rgba(0,0,0,.6);
+  opacity:0;transform:translateY(24px) scale(.96);pointer-events:none;transition:opacity .4s,transform .4s cubic-bezier(.2,.8,.2,1)}
+#vaki.on{opacity:1;transform:none;pointer-events:auto}
+#vaki header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+#vaki header b{flex:1;font-size:clamp(13px,1.8vh,16px);line-height:1.25}
+#vaki .x{all:unset;cursor:pointer;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3)}
+#vaki .x:hover{background:rgba(255,255,255,.25)}
+#vaki .vk-row{display:flex;gap:14px;align-items:center}
+#vaki .vk-qr{width:132px;height:132px;flex:none;border-radius:14px;background:#fff;padding:6px;box-shadow:0 0 0 1px rgba(255,255,255,.5),0 6px 18px rgba(0,0,0,.4);image-rendering:pixelated}
+#vaki .vk-side{display:flex;flex-direction:column;gap:9px;min-width:0}
+#vaki .vk-side p{font-size:13px;line-height:1.35;opacity:.85}
+#vaki .vk-open{display:inline-flex;justify-content:center;gap:6px;padding:9px 14px;border-radius:999px;color:#2b1a00;font-weight:800;font-size:14px;text-decoration:none;
+  background:linear-gradient(180deg,#fff1b8,#ffc94d 55%,#f0a020);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 4px 12px rgba(0,0,0,.35)}
+#vaki .vk-open:hover{filter:brightness(1.08)}
+#vaki .vk-more{all:unset;cursor:pointer;font-size:12px;opacity:.75;text-decoration:underline}
+#vaki .vk-more:hover{opacity:1}
+#vaki .frame{width:100%;max-width:350px;height:min(415px,calc(100vh - 420px));min-height:260px;margin:12px auto 0;border-radius:14px;overflow:hidden;background:#fff}
+#vaki .frame[hidden]{display:none}
+#vaki iframe{width:100%;height:100%;border:0;display:block}
+#vaki .never{all:unset;cursor:pointer;display:block;margin:10px auto 0;font-size:12px;opacity:.7;text-decoration:underline}
+#vaki .never:hover{opacity:1}
+body.lite #vaki{background:rgba(16,20,44,.97)}
 body.lite .pill,body.lite .dock,body.lite .tag{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(20,26,48,.85)}
 body.lite .card .art{-webkit-box-reflect:unset}
 body.lite .card.sel .ring{animation:none}
@@ -244,6 +272,7 @@ body.lite .card.sel .ring{animation:none}
   </div>
   <div class="status">
     <span class="count"><i></i><span id="count"></span></span>
+    <button class="support-btn" id="bSupport"><i>💛</i><span data-i18n="support">Apoyar</span></button>
     <span id="clock">--:--</span>
   </div>
 </header>
@@ -289,6 +318,19 @@ body.lite .card.sel .ring{animation:none}
 <canvas id="fx"></canvas>
 <div class="slam" id="slam"><span data-i18n="slam">¡A JUGAR!</span><b></b></div>
 <div id="flashW"></div>
+<aside id="vaki" aria-hidden="true">
+  <header><b data-i18n="supTitle">¿Te gustan estos juegos? ¡Apoya el proyecto!</b><button class="x" id="vakiClose" data-i18n-title="supClose" title="Cerrar">✕</button></header>
+  <div class="vk-row">
+    <img class="vk-qr" id="vakiQR" alt="QR Vaki">
+    <div class="vk-side">
+      <p data-i18n="supScan">Escanea con tu celular para apoyar o compartir</p>
+      <a class="vk-open" id="vakiLink" target="_blank" rel="noopener"><span data-i18n="supOpen">Abrir en Vaki</span> ↗</a>
+      <button class="vk-more" id="vakiMore" data-i18n="supMore">Ver la campaña aquí</button>
+    </div>
+  </div>
+  <div class="frame" id="vakiFrame" hidden></div>
+  <button class="never" id="vakiNever" data-i18n="supNever">No volver a mostrar</button>
+</aside>
 <div class="launch" id="launch"><div class="box"><div class="mini" id="launchArt"></div><h2 id="launchTxt">Cargando…</h2><div class="spinner"></div></div></div>
 
 <script>
@@ -518,13 +560,17 @@ const I18N = {
         ver:(w,h)=>`Actualizado <b>${w}</b> · versión ${h}`, today:"hoy", yesterday:"ayer", daysAgo:n=>`hace ${n} días`, locale:"es-CO",
         tHome:"Inicio", tPrev:"Anterior", tPlay:"¡Jugar!", tNext:"Siguiente", tFull:"Pantalla completa (F)", tMusic:"Música (M)",
         tSfx:"Efectos (N)", tLite:"Modo ligero (L)", tLang:"Idioma (I)",
-        hNav:"Navegar", hPlay:"Jugar", hFull:"Pantalla completa", hMusic:"Música", hSfx:"Efectos", hPad:"Gamepad compatible", hLang:"Idioma" },
+        hNav:"Navegar", hPlay:"Jugar", hFull:"Pantalla completa", hMusic:"Música", hSfx:"Efectos", hPad:"Gamepad compatible", hLang:"Idioma",
+        support:"Apoyar", supTitle:"¿Te gustan estos juegos? ¡Apoya el proyecto!", supNever:"No volver a mostrar", supClose:"Cerrar",
+        supScan:"Escanea con tu celular para apoyar o compartir", supOpen:"Abrir en Vaki", supMore:"Ver la campaña aquí", supLess:"Ocultar la campaña" },
   en: { sub:"Choose a game", games:n=>`${n} games`, press:"PRESS START", pressHint:"Enter · click · tap the screen",
         slam:"LET'S PLAY!", loading:n=>`Loading ${n}…`, preview:"PREVIEW", updated:"UPDATED",
         ver:(w,h)=>`Updated <b>${w}</b> · version ${h}`, today:"today", yesterday:"yesterday", daysAgo:n=>`${n} days ago`, locale:"en-US",
         tHome:"Home", tPrev:"Previous", tPlay:"Play!", tNext:"Next", tFull:"Fullscreen (F)", tMusic:"Music (M)",
         tSfx:"Sound effects (N)", tLite:"Lite mode (L)", tLang:"Language (I)",
-        hNav:"Navigate", hPlay:"Play", hFull:"Fullscreen", hMusic:"Music", hSfx:"Effects", hPad:"Gamepad ready", hLang:"Language" },
+        hNav:"Navigate", hPlay:"Play", hFull:"Fullscreen", hMusic:"Music", hSfx:"Effects", hPad:"Gamepad ready", hLang:"Language",
+        support:"Support", supTitle:"Enjoying these games? Support the project!", supNever:"Don't show again", supClose:"Close",
+        supScan:"Scan with your phone to support or share", supOpen:"Open on Vaki", supMore:"See the campaign here", supLess:"Hide the campaign" },
 };
 let LANG = (()=>{ try{ const v=localStorage.getItem("arcade_lang"); if(v==="es"||v==="en") return v; }catch(e){} return "es"; })();
 const T = k => I18N[LANG][k];
@@ -982,6 +1028,7 @@ if((navigator.hardwareConcurrency||4)<=2 || (navigator.deviceMemory&&navigator.d
 function applyLang(){
   document.documentElement.lang=LANG;
   document.querySelectorAll("[data-i18n]").forEach(el=>{ const v=T(el.dataset.i18n); if(typeof v==="string") el.textContent=v; });
+  document.querySelectorAll("[data-i18n-title]").forEach(el=>{ const v=T(el.dataset.i18nTitle); if(typeof v==="string") el.title=v; });
   $("#hubSub").textContent=T("sub");
   $("#count").textContent=T("games")(GAMES.filter(g=>g.url).length);
   $("#langTxt").textContent=LANG.toUpperCase();
@@ -998,6 +1045,56 @@ function setLang(l){
 $("#bLang").onclick=()=>setLang(LANG==="es"?"en":"es");
 document.querySelectorAll("#langPick button").forEach(b=>b.addEventListener("click",e=>{ e.stopPropagation(); setLang(b.dataset.l); }));
 addEventListener("keydown",e=>{ if(started&&(e.key==="i"||e.key==="I")) setLang(LANG==="es"?"en":"es"); });
+
+/* =========================================================
+   APOYO (Vaki) — aparece solo después de un tiempo de uso, se cierra fácil
+   ========================================================= */
+const SUPPORT = {
+  enabled: true,                                          // false = desactivar todo (botón y tarjeta)
+  link: "https://vaki.co/vaki/Englishgaming",              // página de la campaña (botón y QR)
+  qr: "img/vaki-qr.png",
+  src: "https://vaki.co/iframe/mvzAiWnhUWN299C5oFHh",       // widget opcional ("Ver la campaña aquí")
+  delayMin: 3,          // minutos de uso del menú antes de mostrarse solo
+  snoozeHours: 24,      // al cerrarla, no vuelve a salir sola hasta pasadas estas horas
+};
+(()=>{
+  const box=$("#vaki"), btn=$("#bSupport");
+  if(!SUPPORT.enabled){ box.remove(); btn.remove(); return; }
+  const qs=new URLSearchParams(location.search), testSec=+qs.get("vaki");   // prueba: ?vaki=10 → sale a los 10 s
+  const delay = testSec>0 ? testSec : SUPPORT.delayMin*60;
+  const getSnooze=()=>{ try{ return +localStorage.getItem("vaki_snooze")||0; }catch(e){ return 0; } };
+  const setSnooze=ms=>{ try{ localStorage.setItem("vaki_snooze",String(Date.now()+ms)); }catch(e){} };
+  let open=false, shownAuto=false, active=0;
+  $("#vakiLink").href=SUPPORT.link; $("#vakiQR").src=asset(SUPPORT.qr);
+  const frame=$("#vakiFrame"), more=$("#vakiMore");
+  more.addEventListener("click",()=>{
+    const showing=!frame.hidden; frame.hidden=showing;
+    if(!showing && !frame.querySelector("iframe")){
+      const f=document.createElement("iframe"); f.id="vakiIframe"; f.title=T("supTitle"); f.src=SUPPORT.src; frame.appendChild(f);
+    }
+    more.dataset.i18n = showing ? "supMore" : "supLess"; more.textContent=T(more.dataset.i18n);
+  });
+  window.supportOpen=()=>open;
+  function show(){
+    if(open) return; open=true;
+    box.classList.add("on"); box.setAttribute("aria-hidden","false");
+    if(typeof osc==="function" && soundOn) { try{ if(ac()) [659,880].forEach((f,i)=>osc("sine",f,actx.currentTime+i*.09,.3,.05,sfxBus)); }catch(e){} }
+  }
+  function hide(forMs){ if(!open) return; open=false; box.classList.remove("on"); box.setAttribute("aria-hidden","true"); setSnooze(forMs); }
+  btn.addEventListener("click",e=>{ e.stopPropagation(); open?hide(SUPPORT.snoozeHours*36e5):show(); });
+  $("#vakiClose").addEventListener("click",()=>hide(SUPPORT.snoozeHours*36e5));
+  $("#vakiNever").addEventListener("click",()=>hide(3650*864e5));
+  // mientras está abierta, el teclado no mueve el menú ni lanza juegos; Esc la cierra
+  addEventListener("keydown",e=>{ if(!open) return;
+    if(e.key==="Escape"){ hide(SUPPORT.snoozeHours*36e5); e.stopImmediatePropagation(); }
+    else if(["Enter"," ","ArrowLeft","ArrowRight","a","d"].includes(e.key)) e.stopImmediatePropagation();
+  },true);
+  // contar solo tiempo real en el menú: pestaña visible, después de START y sin lanzar un juego
+  setInterval(()=>{
+    if(shownAuto||open||!started||launching||document.visibilityState!=="visible") return;
+    if(++active>=delay && Date.now()>getSnooze()){ shownAuto=true; show(); }
+  },1000);
+})();
 
 /* --- despertar juegos que viven en otro servicio de Render (se duermen en el plan gratis) --- */
 GAMES.filter(g=>g.wake).forEach(g=>{ try{ fetch(g.wake,{mode:"no-cors",cache:"no-store"}).catch(()=>{}); }catch(e){} });
