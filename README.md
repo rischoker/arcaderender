@@ -5,7 +5,7 @@ Hub de juegos estilo consola + servidor que sirve todos los juegos desde un solo
 | Ruta | Juego | Tipo |
 |---|---|---|
 | `/` | Hub (menú) | estático |
-| `/chickenhorde/?host=1` | Chicken Horde | estático |
+| `chicken-horde.onrender.com` | Chicken Horde | servicio propio en Render (el hub enlaza y lo despierta) |
 | `/planetcat/` | Gato Swing | estático |
 | `/battlecity/` | Battle City 3D | estático |
 | `/flappyverbs/` | Flappy Verbs | estático |

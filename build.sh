@@ -34,7 +34,6 @@ version_only () {   # juegos que viven en otro servicio: solo se anota su versi�
 # Juegos estáticos (se sirven tal cual)
 clone Battlecity   battlecity
 clone planetcat    planetcat
-clone ChickenHorde chickenhorde
 clone flappyverbs  flappyverbs
 clone wordclimbers wordclimbers
 
@@ -49,8 +48,8 @@ if [ -d apps/duelarena ]; then
   (cd apps/duelarena && npm install --omit=dev --no-audit --no-fund) || { echo "!! DuelArena: falló npm install, se omite"; rm -rf apps/duelarena; FAILED="$FAILED DuelArena"; }
 fi
 
-# Juegos en su propio servicio de Render (solo versión para la cinta "ACTUALIZADO"), por ejemplo:
-# version_only NombreDelRepo clave
+# Juegos en su propio servicio de Render (solo versión para la cinta "ACTUALIZADO")
+version_only ChickenHorde chickenhorde     # https://chicken-horde.onrender.com
 
 # Versión de cada juego (el hub muestra "ACTUALIZADO" en la tarjeta)
 echo "{${VERSIONS%,}}" > versions.json

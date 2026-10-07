@@ -355,7 +355,9 @@ const HUB = { name: "Rischoker Arcade", voice: "hub",
   music: "media/musica/arcade-rush.mp3" };
 
 const GAMES = [
-  { id:"chicken", name:"Chicken Horde", url:"chickenhorde/?host=1",
+  { id:"chicken", name:"Chicken Horde", url:"https://chicken-horde.onrender.com/?host=1",
+    wake:"https://chicken-horde.onrender.com/healthz",   // servicio propio en Render: el hub lo despierta al abrir
+    ver:"chickenhorde",
     accent:"#ff8a3d", accent2:"#ffd36b", video:"", voice:"chicken",
     cover:"img/chicken-horde-card.jpg", logo:"img/chicken-horde-logo.webp", hero:"img/chicken-horde.jpg",
     tags:{ es:["Defensa de granja","Cooperativo","Control: tu teléfono"], en:["Farm defense","Co-op","Your phone is the controller"] },
