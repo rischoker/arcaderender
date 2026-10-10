@@ -33,7 +33,7 @@ html,body{height:100%;overflow:hidden;background:#05060d;color:var(--txt);font-f
 .cimg .kb{width:100%;height:100%;object-fit:cover;display:block;transform-origin:60% 70%}
 .playing .cimg .kb{animation:kb 7s ease-in-out infinite alternate}
 @keyframes kb{to{transform:scale(1.18) translate(-4%,-2%)}}
-.cimg .clogo{position:absolute;left:3%;top:2%;width:94%;filter:drop-shadow(0 4px 8px rgba(0,0,0,.45));transition:transform .4s}
+.cimg .clogo{position:absolute;left:3%;top:9%;width:94%;filter:drop-shadow(0 4px 8px rgba(0,0,0,.45));transition:transform .4s}
 .playing .cimg .clogo{animation:logoPop 1.2s ease-in-out infinite alternate}
 .cimg .clogo.bottom{top:auto;bottom:3%;left:8%;width:84%}
 @keyframes logoPop{to{transform:scale(1.05) rotate(-1.5deg)}}
@@ -450,6 +450,15 @@ const GAMES = [
     tags:{ es:["Pantalla dividida","2 equipos"], en:["Split screen","2 teams"] },
     desc:{ es:"Dos equipos compiten en la pizarra: toquen la respuesta correcta para escalar la montaña de hielo. ¡Gana el equipo que suba más alto antes de que se acabe el tiempo!",
            en:"Two teams race on the board: tap the right answer to climb the ice mountain. The team that climbs highest before time runs out wins!" } },
+  { id:"phrasalgp", name:"Phrasal GP", url:"https://phrasal-gp.onrender.com/?host=1",
+    cat:"learn", play:"phone", learn:{ es:"Phrasal verbs, niveles A2–C1", en:"Phrasal verbs, levels A2–C1" },
+    wake:"https://phrasal-gp.onrender.com/healthz",     // servicio propio en Render: el hub lo despierta al abrir
+    ver:"phrasalgp",
+    accent:"#ff2a2a", accent2:"#5cc8ff", video:"", voice:"phrasalgp",
+    cover:"img/phrasal-gp-card.jpg", logo:"img/phrasal-gp-logo.webp", hero:"img/phrasal-gp.jpg",
+    tags:{ es:["Carreras estilo F1","Hasta 6 pilotos"], en:["F1-style racing","Up to 6 drivers"] },
+    desc:{ es:"Carreras estilo F1 en circuitos como Bogotá, Tokio y Londres: cada phrasal verb correcto acelera tu carro. Al final, un reporte por estudiante con sus fortalezas y lo que debe repasar.",
+           en:"F1-style races on circuits like Bogotá, Tokyo and London: every correct phrasal verb speeds up your car. At the end, a report for each student with strengths and what to review." } },
 ];
 
 /* =========================================================

@@ -50,6 +50,7 @@ fi
 
 # Juegos en su propio servicio de Render (solo versión para la cinta "ACTUALIZADO")
 version_only ChickenHorde chickenhorde     # https://chicken-horde.onrender.com
+version_only phrasal-gp   phrasalgp        # https://phrasal-gp.onrender.com
 
 # Versión de cada juego (el hub muestra "ACTUALIZADO" en la tarjeta)
 echo "{${VERSIONS%,}}" > versions.json
