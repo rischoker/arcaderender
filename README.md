@@ -12,6 +12,7 @@ Hub de juegos estilo consola + servidor que sirve todos los juegos desde un solo
 | `/wordclimbers/` | Word Climbers | estático |
 | `/castlequest/` | Castle Quest | con servidor (celulares en `/play`) |
 | `phrasal-gp.onrender.com` | Phrasal GP | servicio propio en Render (el hub enlaza y lo despierta) |
+| `eye-of-the-beholder.onrender.com` | Eye of the Beholder | servicio propio en Render (el hub enlaza y lo despierta) |
 | `/duelarena/` | Duel Arena | con servidor (celulares en `/duelarena/play.html`) |
 
 ## Publicar en Render (Web Service)
