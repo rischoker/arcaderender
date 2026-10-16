@@ -33,7 +33,6 @@ version_only () {   # juegos que viven en otro servicio: solo se anota su versi�
 
 # Juegos estáticos (se sirven tal cual)
 clone Battlecity   battlecity
-clone planetcat    planetcat
 clone flappyverbs  flappyverbs
 clone wordclimbers wordclimbers
 clone go-snail-go  gosnailgo
@@ -51,6 +50,7 @@ fi
 
 # Juegos en su propio servicio de Render (solo versión para la cinta "ACTUALIZADO")
 version_only ChickenHorde chickenhorde     # https://chicken-horde.onrender.com
+version_only planetcat    planetcat        # https://gato-swing.onrender.com
 version_only phrasal-gp   phrasalgp        # https://phrasal-gp.onrender.com
 version_only eye-of-the-beholder beholder  # https://eye-of-the-beholder.onrender.com
 
