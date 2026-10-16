@@ -167,6 +167,12 @@ html,body{height:100%;overflow:hidden;background:#05060d;color:var(--txt);font-f
 .grp[data-cat="learn"]{background:linear-gradient(180deg,var(--learn1),var(--learn2))}
 .grp i{font-style:normal;font-size:clamp(20px,2.6vh,28px)}
 .grp b{writing-mode:vertical-rl;transform:rotate(180deg);font:900 clamp(13px,1.9vh,18px)/1 var(--font);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+/* separador de subgrupo dentro de una categoría (celular / pizarra) */
+.sub{flex:none;align-self:center;height:72%;width:clamp(30px,2.6vw,40px);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  background:rgba(0,0,0,.4);border:1px dashed rgba(255,255,255,.45);text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.sub i{font-style:normal;font-size:clamp(15px,2vh,20px)}
+.sub b{writing-mode:vertical-rl;transform:rotate(180deg);font:800 clamp(10px,1.4vh,13px)/1 var(--font);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;opacity:.9}
+.track .off{display:none}
 /* sello de categoría en la tarjeta */
 .card .cat-tag{position:absolute;top:10px;left:10px;z-index:3;width:clamp(28px,3.4vh,36px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-size:clamp(14px,1.8vh,18px);
   box-shadow:0 0 0 2px #fff,0 4px 10px rgba(0,0,0,.45)}
@@ -436,20 +442,6 @@ const GAMES = [
     tags:{ es:["Examen EFL A1–C1","Defensa de castillo"], en:["EFL exam A1–C1","Castle defense"] },
     desc:{ es:"Defiende el castillo respondiendo preguntas tipo examen, cada uno a su ritmo. Acierta y llegan suministros; falla y el castillo sufre. ¡Seis oleadas y un jefe final!",
            en:"Defend the castle by answering exam-style questions, each at your own pace. Get it right and supplies arrive; get it wrong and the castle takes damage. Six waves and a final boss!" } },
-  { id:"duelarena", name:"Duel Arena", url:"duelarena/",
-    cat:"learn", play:"both", learn:{ es:"Gramática por temas, con retroalimentación al final", en:"Grammar by topic, with feedback at the end" },
-    accent:"#8f6bff", accent2:"#ffd36b", video:"", voice:"duelarena",
-    cover:"img/duel-arena-card.jpg", hero:"img/duel-arena.jpg",
-    tags:{ es:["Clan contra clan","Gramática"], en:["Clan vs clan","Grammar"] },
-    desc:{ es:"Duelo de gramática en un salón de ajedrez gigante: la Orden de Marfil contra la de Obsidiana. Cada respuesta correcta es un golpe y al final la pizarra muestra las fortalezas y los temas a repasar.",
-           en:"A grammar duel in a giant chess hall: the Ivory Order against the Obsidian Order. Every correct answer is a hit, and at the end the board shows strengths and topics to review." } },
-  { id:"wordclimbers", name:"Word Climbers", url:"wordclimbers/",
-    cat:"learn", play:"board", learn:{ es:"Gramática y vocabulario por niveles, en equipos", en:"Leveled grammar & vocabulary, in teams" },
-    accent:"#5fd8ff", accent2:"#d6f6ff", video:"", voice:"wordclimbers",
-    cover:"img/word-climbers-card.jpg", hero:"img/word-climbers.jpg",
-    tags:{ es:["Pantalla dividida","2 equipos"], en:["Split screen","2 teams"] },
-    desc:{ es:"Dos equipos compiten en la pizarra: toquen la respuesta correcta para escalar la montaña de hielo. ¡Gana el equipo que suba más alto antes de que se acabe el tiempo!",
-           en:"Two teams race on the board: tap the right answer to climb the ice mountain. The team that climbs highest before time runs out wins!" } },
   { id:"phrasalgp", name:"Phrasal GP", url:"https://phrasal-gp.onrender.com/?host=1",
     cat:"learn", play:"phone", learn:{ es:"Phrasal verbs, niveles A2–C1", en:"Phrasal verbs, levels A2–C1" },
     wake:"https://phrasal-gp.onrender.com/healthz",     // servicio propio en Render: el hub lo despierta al abrir
@@ -468,6 +460,27 @@ const GAMES = [
     tags:{ es:["Fantasía oscura","Hasta 10 jugadores"], en:["Dark fantasy","Up to 10 players"] },
     desc:{ es:"Un beholder gigante hace preguntas de inglés: párate en el círculo de la respuesta correcta antes de que acabe la cuenta… o te fulmina con sus rayos. Al final, un informe por estudiante.",
            en:"A giant beholder asks English questions: stand on the circle with the right answer before the countdown ends… or its eye rays strike you down. At the end, a report for each student." } },
+  { id:"duelarena", name:"Duel Arena", url:"duelarena/",
+    cat:"learn", play:"both", learn:{ es:"Gramática por temas, con retroalimentación al final", en:"Grammar by topic, with feedback at the end" },
+    accent:"#8f6bff", accent2:"#ffd36b", video:"", voice:"duelarena",
+    cover:"img/duel-arena-card.jpg", hero:"img/duel-arena.jpg",
+    tags:{ es:["Clan contra clan","Gramática"], en:["Clan vs clan","Grammar"] },
+    desc:{ es:"Duelo de gramática en un salón de ajedrez gigante: la Orden de Marfil contra la de Obsidiana. Cada respuesta correcta es un golpe y al final la pizarra muestra las fortalezas y los temas a repasar.",
+           en:"A grammar duel in a giant chess hall: the Ivory Order against the Obsidian Order. Every correct answer is a hit, and at the end the board shows strengths and topics to review." } },
+  { id:"wordclimbers", name:"Word Climbers", url:"wordclimbers/",
+    cat:"learn", play:"board", learn:{ es:"Gramática y vocabulario por niveles, en equipos", en:"Leveled grammar & vocabulary, in teams" },
+    accent:"#5fd8ff", accent2:"#d6f6ff", video:"", voice:"wordclimbers",
+    cover:"img/word-climbers-card.jpg", hero:"img/word-climbers.jpg",
+    tags:{ es:["Pantalla dividida","2 equipos"], en:["Split screen","2 teams"] },
+    desc:{ es:"Dos equipos compiten en la pizarra: toquen la respuesta correcta para escalar la montaña de hielo. ¡Gana el equipo que suba más alto antes de que se acabe el tiempo!",
+           en:"Two teams race on the board: tap the right answer to climb the ice mountain. The team that climbs highest before time runs out wins!" } },
+  { id:"gosnail", name:"Go! Snail Go!", url:"gosnailgo/",
+    cat:"learn", play:"board", learn:{ es:"Orden de las palabras en la oración", en:"Word order in sentences" },
+    accent:"#f5b32a", accent2:"#7ccf5a", video:"", voice:"gosnail",
+    cover:"img/go-snail-card.jpg", hero:"img/go-snail.jpg",
+    tags:{ es:["2 equipos","Pantalla táctil"], en:["2 teams","Touch screen"] },
+    desc:{ es:"Mocha contra Mochi: gira la concha del caracol hasta encontrar la palabra que sigue y arma la oración antes que el otro equipo. Al final, repaso de las oraciones y feedback por equipo.",
+           en:"Mocha vs Mochi: spin the snail's shell to find the next word and build the sentence before the other team. At the end, a review of the sentences and feedback for each team." } },
 ];
 
 /* =========================================================
@@ -631,7 +644,7 @@ const I18N = {
         ver:(w,h)=>`Actualizado <b>${w}</b> · versión ${h}`, today:"hoy", yesterday:"ayer", daysAgo:n=>`hace ${n} días`, locale:"es-CO",
         tHome:"Inicio", tPrev:"Anterior", tPlay:"¡Jugar!", tNext:"Siguiente", tFull:"Pantalla completa (F)", tMusic:"Música (M)",
         tSfx:"Efectos (N)", tLite:"Modo ligero (L)", tLang:"Idioma (I)",
-        hNav:"Navegar", hPlay:"Jugar", hFull:"Pantalla completa", hMusic:"Música", hSfx:"Efectos", hPad:"Gamepad compatible", hLang:"Idioma", hCat:"Categoría",
+        hNav:"Navegar", hPlay:"Jugar", hFull:"Pantalla completa", hMusic:"Música", hSfx:"Efectos", hPad:"Gamepad compatible", hLang:"Idioma", hCat:"Categoría", subPhone:"Con celular", subBoard:"En la pizarra", subBoth:"Pizarra o celular",
         catFun:"Para divertirse y animar la clase", catLearn:"Para practicar inglés jugando",
         playPhone:"Escanea el QR y juega con tu celular", playBoard:"Se juega en la pizarra, por equipos", playBoth:"En la pizarra o con celulares", practice:"Practicas:",
         support:"Apoyar", supTitle:"¿Te gustan estos juegos? ¡Apoya el proyecto!", supNever:"No volver a mostrar", supClose:"Cerrar",
@@ -641,7 +654,7 @@ const I18N = {
         ver:(w,h)=>`Updated <b>${w}</b> · version ${h}`, today:"today", yesterday:"yesterday", daysAgo:n=>`${n} days ago`, locale:"en-US",
         tHome:"Home", tPrev:"Previous", tPlay:"Play!", tNext:"Next", tFull:"Fullscreen (F)", tMusic:"Music (M)",
         tSfx:"Sound effects (N)", tLite:"Lite mode (L)", tLang:"Language (I)",
-        hNav:"Navigate", hPlay:"Play", hFull:"Fullscreen", hMusic:"Music", hSfx:"Effects", hPad:"Gamepad ready", hLang:"Language", hCat:"Category",
+        hNav:"Navigate", hPlay:"Play", hFull:"Fullscreen", hMusic:"Music", hSfx:"Effects", hPad:"Gamepad ready", hLang:"Language", hCat:"Category", subPhone:"With phones", subBoard:"On the board", subBoth:"Board or phones",
         catFun:"Warm up the class and have a blast", catLearn:"Practice English while you play",
         playPhone:"Scan the QR and play with your phone", playBoard:"Played on the board, in teams", playBoth:"On the board or with phones", practice:"You practice:",
         support:"Support", supTitle:"Enjoying these games? Support the project!", supNever:"Don't show again", supClose:"Close",
@@ -678,15 +691,33 @@ GAMES.forEach((g,i)=>{
     p.addEventListener("click",()=>select(firstOfCat(k)));
     track.appendChild(p);
   }
+  const SUBS={phone:["📱","subPhone"],board:["👆","subBoard"],both:["📱👆","subBoth"]};
+  const sameCat=GAMES.filter(x=>catOf(x)===catOf(g)), mixed=new Set(sameCat.map(x=>x.play||"phone")).size>1;
+  if(mixed && (i===0 || catOf(GAMES[i-1])!==catOf(g) || (GAMES[i-1].play||"phone")!==(g.play||"phone"))){
+    const sb=document.createElement("div"); sb.className="sub"; sb.dataset.cat=catOf(g); sb.dataset.sub=SUBS[g.play||"phone"][1];
+    sb.innerHTML=`<i>${SUBS[g.play||"phone"][0]}</i><b></b>`; track.appendChild(sb);
+  }
   const c=document.createElement("div");
   c.className="card"; c.tabIndex=-1;
   c.innerHTML=`<div class="art">${coverSVG(g)}${g.video?`<video class="snap" muted loop playsinline preload="none" src="${g.video}"></video>`:""}</div>
-    <div class="gloss"></div><div class="shine"></div><div class="ring"></div><div class="cat-tag" data-cat="${catOf(g)}">${CATS[catOf(g)].icon}</div><div class="badge"><i></i><span class="bt">VISTA PREVIA</span></div>`;
+    <div class="gloss"></div><div class="shine"></div><div class="ring"></div><div class="cat-tag" data-cat="${catOf(g)}" data-c="${catOf(g)}">${CATS[catOf(g)].icon}</div><div class="badge"><i></i><span class="bt">VISTA PREVIA</span></div>`;
   c.addEventListener("mouseenter",()=>select(i,false));
   c.addEventListener("click",()=>{ if(i===sel) launch(); else select(i,true); });
   track.appendChild(c);
 });
 const cards=[...track.querySelectorAll(".card")];
+cards.forEach((c,i)=>c.dataset.cat=catOf(GAMES[i]));
+let shownCat=null;
+function showCat(k){                       // el carrusel muestra solo la categoría elegida
+  if(k===shownCat) return; shownCat=k;
+  track.querySelectorAll(".card,.grp,.sub").forEach(el=>el.classList.toggle("off",el.dataset.cat!==k));
+  offset=0; track.style.transform="translateX(0)";
+}
+function navStep(d){                          // ← → se mueven dentro de la categoría; en el borde saltan a la otra
+  const j=sel+d;
+  if(j<0||j>=GAMES.length) return;
+  select(j);
+}
 $("#nFun").textContent=GAMES.filter(g=>catOf(g)==="fun").length;
 $("#nLearn").textContent=GAMES.filter(g=>catOf(g)==="learn").length;
 document.querySelectorAll("#cats button").forEach(b=>b.addEventListener("click",e=>{ e.stopPropagation(); select(firstOfCat(b.dataset.cat)); }));
@@ -725,6 +756,7 @@ fetch("versions.json",{cache:"no-store"}).then(r=>r.ok?r.json():{}).then(v=>{ VE
 function select(i,recenter=true){
   i=Math.max(0,Math.min(GAMES.length-1,i));
   const changed=i!==sel;
+  showCat(catOf(GAMES[i]));
   cards.forEach(c=>{c.classList.remove("sel");stopPreview(c)});
   sel=i; const c=cards[i], g=GAMES[i];
   c.classList.add("sel");
@@ -1062,8 +1094,8 @@ addEventListener("pageshow",()=>{ if(bgm&&musicOn&&started) bgm.play().catch(()=
   cards.forEach(c=>c.classList.remove("chosen")); if(started&&musicOn&&actx) musicLevel(MUS_VOL,.3); });
 
 /* --- controles --- */
-$("#bPrev").onclick=()=>select(sel-1);
-$("#bNext").onclick=()=>select(sel+1);
+$("#bPrev").onclick=()=>navStep(-1);
+$("#bNext").onclick=()=>navStep(1);
 $("#bPlay").onclick=launch;
 $("#bHome").onclick=()=>{offset=0;select(0)};
 $("#bFull").onclick=toggleFull;
@@ -1076,8 +1108,8 @@ addEventListener("keydown",e=>{
   if(!started){ if(!["Shift","Control","Alt","Meta"].includes(e.key)){ e.preventDefault(); startHub(); } return; }
   ac();
   switch(e.key){
-    case "ArrowRight": case "d": select(sel+1); break;
-    case "ArrowLeft": case "a": select(sel-1); break;
+    case "ArrowRight": case "d": navStep(1); break;
+    case "ArrowLeft": case "a": navStep(-1); break;
     case "ArrowUp": case "ArrowDown": { e.preventDefault(); const k=catOf(GAMES[sel])==="fun"?"learn":"fun"; select(firstOfCat(k)); break; }
     case "Enter": case " ": e.preventDefault(); launch(); break;
     case "f": case "F": toggleFull(); break;
@@ -1088,10 +1120,10 @@ addEventListener("keydown",e=>{
   }
 });
 let wheelLock=0;
-addEventListener("wheel",e=>{ if(!started) return; const n=Date.now(); if(n-wheelLock<180) return; wheelLock=n; select(sel+((e.deltaY||e.deltaX)>0?1:-1)); },{passive:true});
+addEventListener("wheel",e=>{ if(!started) return; const n=Date.now(); if(n-wheelLock<180) return; wheelLock=n; navStep((e.deltaY||e.deltaX)>0?1:-1); },{passive:true});
 let tx=null;
 addEventListener("touchstart",e=>tx=e.touches[0].clientX,{passive:true});
-addEventListener("touchend",e=>{ if(tx===null||!started) return; const dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50) select(sel+(dx<0?1:-1)); tx=null; });
+addEventListener("touchend",e=>{ if(tx===null||!started) return; const dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50) navStep(dx<0?1:-1); tx=null; });
 
 /* --- gamepad (control de Xbox/genérico) --- */
 let padPrev={};
@@ -1103,8 +1135,8 @@ function pollPad(){
       a:p.buttons[0]?.pressed||p.buttons[9]?.pressed };
     if(!started){ if(st.a&&!padPrev.a) startHub(); }
     else{
-      if(st.l&&!padPrev.l) select(sel-1);
-      if(st.r&&!padPrev.r) select(sel+1);
+      if(st.l&&!padPrev.l) navStep(-1);
+      if(st.r&&!padPrev.r) navStep(1);
       if(st.a&&!padPrev.a) launch();
     }
     padPrev=st;
@@ -1134,6 +1166,7 @@ function applyLang(){
   $("#langTxt").textContent=LANG.toUpperCase();
   document.querySelectorAll("#langPick button").forEach(b=>b.classList.toggle("on",b.dataset.l===LANG));
   document.querySelectorAll(".card .bt").forEach(b=>b.textContent=T("preview"));
+  document.querySelectorAll(".sub").forEach(sb=>sb.querySelector("b").textContent=T(sb.dataset.sub));
   cards.forEach((c,i)=>{ const g=GAMES[i]; if(g.cover==="soon"){ c.querySelector(".art").innerHTML=coverSVG(g); } });
   if(typeof applyVersions==="function") applyVersions();
   if(typeof catInfo==="function" && cards[sel]) catInfo(GAMES[sel]);
