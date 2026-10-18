@@ -168,9 +168,13 @@ html,body{height:100%;overflow:hidden;background:#05060d;color:var(--txt);font-f
 .grp i{font-style:normal;font-size:clamp(20px,2.6vh,28px)}
 .grp b{writing-mode:vertical-rl;transform:rotate(180deg);font:900 clamp(13px,1.9vh,18px)/1 var(--font);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
 /* separador de subgrupo dentro de una categoría (celular / pizarra) */
-.sub{flex:none;align-self:center;height:72%;width:clamp(30px,2.6vw,40px);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+.sub{flex:none;align-self:center;height:74%;width:clamp(32px,2.7vw,42px);border-radius:14px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;
+  background:linear-gradient(180deg,rgba(255,255,255,.30),rgba(255,255,255,.08) 48%,rgba(255,255,255,.02) 50%,rgba(255,255,255,.12)),linear-gradient(180deg,var(--learn1),var(--learn2));
+  border:1px solid rgba(255,255,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 8px 20px rgba(0,0,0,.4);opacity:.88;text-shadow:0 1px 3px rgba(0,0,0,.55)}
+.sub[data-cat="fun"]{background:linear-gradient(180deg,rgba(255,255,255,.30),rgba(255,255,255,.08) 48%,rgba(255,255,255,.02) 50%,rgba(255,255,255,.12)),linear-gradient(180deg,var(--fun1),var(--fun2))}
+.sub::before{content:"";position:absolute;left:12%;right:12%;top:3%;height:22%;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,0))}
   background:rgba(0,0,0,.4);border:1px dashed rgba(255,255,255,.45);text-shadow:0 1px 3px rgba(0,0,0,.6)}
-.sub i{font-style:normal;font-size:clamp(15px,2vh,20px)}
+.sub i{font-style:normal;font-size:clamp(14px,1.9vh,19px);position:relative;filter:drop-shadow(0 1px 1px rgba(0,0,0,.4))}
 .sub b{writing-mode:vertical-rl;transform:rotate(180deg);font:800 clamp(10px,1.4vh,13px)/1 var(--font);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;opacity:.9}
 .track .off{display:none}
 /* sello de categoría en la tarjeta */
@@ -284,7 +288,7 @@ body.lite .card.sel .ring{animation:none}
   .pill small{display:none}
   .dock{bottom:14px}
 }
-@media (prefers-reduced-motion:reduce){*{animation-duration:0s!important;transition-duration:0s!important}}
+@media (prefers-reduced-motion:reduce){.flash,.card.sel .ring{animation:none!important}}
 </style>
 </head>
 <body>
@@ -693,7 +697,7 @@ GAMES.forEach((g,i)=>{
     p.addEventListener("click",()=>select(firstOfCat(k)));
     track.appendChild(p);
   }
-  const SUBS={phone:["📱","subPhone"],board:["👆","subBoard"],both:["📱👆","subBoth"]};
+  const SUBS={phone:["📱","subPhone"],board:["👆","subBoard"],both:["🔀","subBoth"]};
   const sameCat=GAMES.filter(x=>catOf(x)===catOf(g)), mixed=new Set(sameCat.map(x=>x.play||"phone")).size>1;
   if(mixed && (i===0 || catOf(GAMES[i-1])!==catOf(g) || (GAMES[i-1].play||"phone")!==(g.play||"phone"))){
     const sb=document.createElement("div"); sb.className="sub"; sb.dataset.cat=catOf(g); sb.dataset.sub=SUBS[g.play||"phone"][1];
@@ -1236,13 +1240,26 @@ const SUPPORT = {
 GAMES.filter(g=>g.wake).forEach(g=>{ try{ fetch(g.wake,{mode:"no-cors",cache:"no-store"}).catch(()=>{}); }catch(e){} });
 
 /* --- modo ligero automático si la animación va lenta (PC del proyector modesto) --- */
-(()=>{ let frames=0, t0=0, done=false;
-  function tick(t){ if(done) return; if(!t0) t0=t; frames++;
-    if(t-t0>=3000){ done=true; const fps=frames*1000/(t-t0);
-      if(fps<40 && !document.body.classList.contains("lite")){ document.body.classList.add("lite"); console.log("[arcade] modo ligero automático, fps:",fps.toFixed(0)); }
-      return; }
-    requestAnimationFrame(tick); }
-  setTimeout(()=>requestAnimationFrame(tick),1500);   // medir después de que cargue todo
+function liteToast(){
+  const t=document.createElement("div");
+  t.textContent = LANG==="en" ? "⚡ Lite mode on to keep things smooth · press L to turn it off" : "⚡ Modo ligero activado para que todo vaya fluido · presiona L para quitarlo";
+  t.style.cssText="position:fixed;z-index:30;left:50%;top:14px;transform:translateX(-50%);padding:9px 18px;border-radius:999px;font:600 14px var(--font);background:rgba(10,14,30,.88);border:1px solid rgba(255,255,255,.35);box-shadow:0 8px 24px rgba(0,0,0,.4);transition:opacity .6s";
+  document.body.appendChild(t); setTimeout(()=>{ t.style.opacity=0; setTimeout(()=>t.remove(),700); },6000);
+}
+(()=>{ let slow=0;
+  function measure(){                          // 2 s de muestra; solo cuenta con la pestaña visible
+    let frames=0, t0=0;
+    function tick(t){ if(document.visibilityState!=="visible"){ setTimeout(measure,2000); return; }
+      if(!t0) t0=t; frames++;
+      if(t-t0<2000) return requestAnimationFrame(tick);
+      const fps=frames*1000/(t-t0);
+      if(fps<35) slow++;
+      if(slow>=2 && !document.body.classList.contains("lite")){ document.body.classList.add("lite"); liteToast(); console.log("[arcade] modo ligero automático, fps:",fps.toFixed(0)); }
+      else if(slow===1) setTimeout(measure,1500);      // confirmar con una segunda medición
+    }
+    requestAnimationFrame(tick);
+  }
+  setTimeout(measure,2500);
 })();
 
 addEventListener("resize",()=>{ ensureVisible(sel); sizeFx(); });
