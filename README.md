@@ -11,6 +11,7 @@ Hub de juegos estilo consola + servidor que sirve todos los juegos desde un solo
 | `/flappyverbs/` | Flappy Verbs | estático |
 | `/wordclimbers/` | Word Climbers | estático |
 | `/gosnailgo/` | Go! Snail Go! | estático |
+| `/syntcore/` | SyntCore | estático |
 | `/castlequest/` | Castle Quest | con servidor (celulares en `/play`) |
 | `phrasal-gp.onrender.com` | Phrasal GP | servicio propio en Render (el hub enlaza y lo despierta) |
 | `eye-of-the-beholder.onrender.com` | Eye of the Beholder | servicio propio en Render (el hub enlaza y lo despierta) |

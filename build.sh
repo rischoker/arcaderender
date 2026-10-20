@@ -36,6 +36,7 @@ clone Battlecity   battlecity
 clone flappyverbs  flappyverbs
 clone wordclimbers wordclimbers
 clone go-snail-go  gosnailgo
+clone SyntCore     syntcore
 
 # Juegos con servidor dentro del arcade
 clone castlequest  apps/castlequest
