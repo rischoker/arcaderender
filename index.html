@@ -427,8 +427,10 @@ const GAMES = [
     tags:{ es:["Ritmo","Eliminación directa"], en:["Rhythm","Knockout"] },
     desc:{ es:"Un gato gigante gira al ritmo de la música y lanza obstáculos. Salta a tiempo… un golpe y quedas fuera.",
            en:"A giant cat spins to the beat and throws obstacles at you. Jump on time… one hit and you're out!" } },
-  { id:"battle", name:"Battle City 3D", url:"battlecity/",
+  { id:"battle", name:"Battle City 3D", url:"https://battlecity-fl0l.onrender.com/host",
     cat:"fun", play:"phone",
+    wake:"https://battlecity-fl0l.onrender.com/healthz",   // servicio propio en Render (Express + Socket.IO): el hub lo despierta al abrir
+    ver:"battlecity",
     accent:"#3fa9ff", accent2:"#ffd54a", video:"", voice:"battle",
     cover:"img/battle-city-card.jpg", logo:"img/battle-city-logo.webp", hero:"img/battle-city.jpg",
     tags:{ es:["Tanques","Cooperativo"], en:["Tanks","Co-op"] },
