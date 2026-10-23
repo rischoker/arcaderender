@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#15111d">
+<title>ScriptBoard Karaoke</title>
+<style>
+  :root {
+    --bg: #15111d; --bg2: #1e1829; --bg3: #2a2338; --line: #3a3150;
+    --tx: #f3ecff; --tx2: #b3a8c9; --tx3: #7d7393;
+    --acc: #ff7a45; --acc2: #ffb347; --ok: #4fd1a5; --bad: #ff5c7a; --me: #ff7a45;
+  }
+  * { box-sizing: border-box; margin: 0; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; }
+  body {
+    font: 500 16px/1.4 "Segoe UI", Roboto, system-ui, -apple-system, sans-serif; color: var(--tx);
+    background: radial-gradient(120% 70% at 50% 0%, #2b1d33 0%, var(--bg) 60%); overflow-x: hidden;
+    padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+  }
+  button, input { font: inherit; color: inherit; }
+  .screen { min-height: 100%; display: flex; flex-direction: column; max-width: 520px; margin: 0 auto; padding: 20px 0; }
+  [hidden] { display: none !important; }
+
+  /* Join */
+  .logo { display: flex; align-items: center; gap: 12px; margin: 10px 0 28px; }
+  .logo b { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--acc); color: #1b1626; font-size: 26px; }
+  .logo h1 { font-size: 22px; line-height: 1.1; }
+  .logo small { display: block; color: var(--tx2); font-weight: 600; font-size: 13px; }
+  label { display: block; color: var(--tx2); font-weight: 700; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; margin: 18px 0 8px; }
+  input.field {
+    width: 100%; height: 56px; padding: 0 16px; border-radius: 16px; border: 2px solid var(--line); background: var(--bg2);
+    font-size: 20px; font-weight: 700; outline: none;
+  }
+  input.field:focus { border-color: var(--acc); }
+  #room { text-transform: uppercase; letter-spacing: .3em; text-align: center; font-size: 26px; }
+  .colors { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; }
+  .colors button { aspect-ratio: 1; border-radius: 50%; border: 3px solid transparent; background: var(--c); }
+  .colors button.on { border-color: #fff; box-shadow: 0 0 0 3px var(--c); }
+  .big {
+    width: 100%; min-height: 60px; margin-top: 26px; border: 0; border-radius: 18px; background: var(--acc); color: #1b1626;
+    font-size: 20px; font-weight: 800; box-shadow: 0 10px 28px rgba(255, 122, 69, .35);
+  }
+  .big:active { transform: scale(.98); }
+  .big:disabled { opacity: .5; }
+  .err { color: var(--bad); font-weight: 700; margin-top: 14px; min-height: 22px; text-align: center; }
+
+  /* Main */
+  .top { display: flex; align-items: center; gap: 10px; }
+  .me { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1; }
+  .dot { width: 34px; height: 34px; border-radius: 50%; background: var(--me); display: grid; place-items: center; color: #1b1626; font-weight: 900; flex: none; }
+  .me b { font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .score { text-align: right; }
+  .score b { font-size: 26px; display: block; line-height: 1; color: var(--acc2); }
+  .score small { color: var(--tx3); font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+  .conn { font-size: 12px; font-weight: 700; color: var(--tx3); margin-top: 8px; }
+  .conn.bad { color: var(--bad); }
+
+  .stage { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px; padding: 22px 0; }
+  .status { font-size: 15px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--tx2); }
+  .status.go { color: var(--ok); }
+  .mic {
+    position: relative; width: 170px; height: 170px; border-radius: 50%; border: 0; background: var(--bg3); color: var(--tx);
+    display: grid; place-items: center; font-size: 64px; box-shadow: 0 0 0 10px rgba(255,255,255,.04);
+  }
+  .mic.on { background: var(--me); color: #1b1626; box-shadow: 0 0 0 10px color-mix(in srgb, var(--me) 25%, transparent); }
+  .mic.on.hearing::after {
+    content: ""; position: absolute; inset: -14px; border-radius: 50%; border: 4px solid var(--me); animation: ring 1s ease-out infinite;
+  }
+  .mic.wait { opacity: .45; }
+  @keyframes ring { from { transform: scale(.9); opacity: 1; } to { transform: scale(1.25); opacity: 0; } }
+  .hint { color: var(--tx2); font-size: 15px; max-width: 340px; }
+  .turn { font-size: 30px; font-weight: 900; line-height: 1.15; }
+  .turn.mine { color: var(--ok); animation: pulse 1s ease-in-out infinite; }
+  @keyframes pulse { 50% { transform: scale(1.05); } }
+  .lyric { min-height: 70px; font-size: 22px; font-weight: 800; line-height: 1.35; padding: 14px 16px; border-radius: 18px; background: rgba(255,255,255,.05); width: 100%; }
+  .lyric span { display: inline-block; margin: 0 .12em; transition: color .2s, transform .2s; }
+  .lyric span.hit { color: var(--ok); transform: scale(1.08); }
+  .heard { font-size: 14px; color: var(--tx3); min-height: 20px; font-style: italic; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .board { width: 100%; display: grid; gap: 6px; }
+  .row { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 12px; background: var(--bg2); font-weight: 700; }
+  .row.meRow { outline: 2px solid var(--me); }
+  .row i { width: 12px; height: 12px; border-radius: 50%; flex: none; }
+  .row span { flex: 1; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pop { position: fixed; left: 50%; top: 38%; transform: translate(-50%, -50%); font-size: 40px; font-weight: 900; color: var(--ok); text-shadow: 0 4px 20px rgba(0,0,0,.5); pointer-events: none; animation: popup 1.2s ease-out forwards; }
+  @keyframes popup { 0% { opacity: 0; transform: translate(-50%, -30%) scale(.6); } 20% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); } 100% { opacity: 0; transform: translate(-50%, -90%) scale(1); } }
+  .note { color: var(--tx3); font-size: 12.5px; text-align: center; margin-top: 8px; }
+</style>
+</head>
+<body>
+  <section class="screen" id="join">
+    <div class="logo"><b>🎤</b><div><h1>ScriptBoard Karaoke</h1><small>Your phone is the microphone</small></div></div>
+    <label for="room">Room code</label>
+    <input class="field" id="room" maxlength="4" autocomplete="off" autocapitalize="characters" placeholder="ABCD">
+    <label for="name">Your name</label>
+    <input class="field" id="name" maxlength="18" autocomplete="off" placeholder="Name">
+    <label>Your color</label>
+    <div class="colors" id="colors"></div>
+    <button class="big" id="joinBtn">Join</button>
+    <div class="err" id="joinErr"></div>
+    <p class="note" id="support"></p>
+  </section>
+
+  <section class="screen" id="main" hidden>
+    <div class="top">
+      <div class="me"><div class="dot" id="meDot"></div><b id="meName"></b></div>
+      <div class="score"><b id="meScore">0</b><small>points</small></div>
+    </div>
+    <div class="conn" id="conn">Connected</div>
+    <div class="stage">
+      <div class="status" id="status">Waiting for the teacher…</div>
+      <div class="turn" id="turn"></div>
+      <button class="mic" id="mic" aria-label="Microphone">🎤</button>
+      <div class="hint" id="hint">Tap the microphone to turn it on.</div>
+      <div class="lyric" id="lyric" hidden></div>
+      <div class="heard" id="heard"></div>
+      <div class="board" id="board"></div>
+    </div>
+  </section>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const COLORS = ['#ff7a45', '#ffd60a', '#4fd1a5', '#64d2ff', '#0a84ff', '#bf5af2', '#ff6ec7', '#ff2d55'];
+  const store = {
+    get(k) { try { return localStorage.getItem('sbk:' + k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem('sbk:' + k, v); } catch (e) { /* ignore */ } }
+  };
+  const params = new URLSearchParams(location.search);
+  let color = store.get('color') || COLORS[Math.floor(Math.random() * COLORS.length)];
+  let me = { id: null, name: store.get('name') || '', room: (params.get('r') || store.get('room') || '').toUpperCase() };
+  let ws = null, retry = 0, wantMic = false, state = null, lastScore = 0;
+
+  // ---------- Unirse ----------
+  $('room').value = me.room; $('name').value = me.name;
+  $('colors').innerHTML = COLORS.map(c => `<button style="--c:${c}" data-c="${c}" class="${c === color ? 'on' : ''}" aria-label="color"></button>`).join('');
+  $('colors').onclick = e => {
+    const b = e.target.closest('[data-c]'); if (!b) return;
+    color = b.dataset.c; store.set('color', color);
+    document.querySelectorAll('#colors button').forEach(x => x.classList.toggle('on', x === b));
+  };
+  if (!me.room) $('room').focus(); else if (!me.name) $('name').focus();
+
+  const Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Rec) $('support').textContent = 'This browser can’t recognize speech. Use Chrome on Android or Safari on iPhone.';
+
+  $('joinBtn').onclick = () => {
+    me.room = $('room').value.trim().toUpperCase(); me.name = $('name').value.trim();
+    if (me.room.length !== 4) { $('joinErr').textContent = 'Type the 4-letter room code.'; return; }
+    if (!me.name) { $('joinErr').textContent = 'Type your name.'; return; }
+    store.set('name', me.name); store.set('room', me.room);
+    if (store.get('idroom') === me.room) me.id = store.get('id');
+    $('joinErr').textContent = ''; $('joinBtn').disabled = true; $('joinBtn').textContent = 'Joining…';
+    connect();
+  };
+
+  function connect() {
+    try { ws?.close(); } catch (e) { /* ignore */ }
+    ws = new WebSocket(location.origin.replace(/^http/, 'ws'));
+    ws.onopen = () => { retry = 0; ws.send(JSON.stringify({ t: 'join', room: me.room, name: me.name, color, id: me.id })); };
+    ws.onmessage = ev => { let m; try { m = JSON.parse(ev.data); } catch (e) { return; } onMsg(m); };
+    ws.onclose = () => {
+      setConn(false);
+      if (!me.id) { $('joinBtn').disabled = false; $('joinBtn').textContent = 'Join'; return; }
+      setTimeout(connect, Math.min(8000, 800 * 2 ** retry++));
+    };
+  }
+
+  function onMsg(m) {
+    if (m.t === 'error') {
+      $('joinErr').textContent = m.msg === 'room' ? 'That room doesn’t exist. Check the code on the board.' : 'The room is full.';
+      me.id = null; $('joinBtn').disabled = false; $('joinBtn').textContent = 'Join';
+      try { ws.close(); } catch (e) { /* ignore */ }
+      return;
+    }
+    if (m.t === 'joined') {
+      me.id = m.id; store.set('id', m.id); store.set('idroom', me.room);
+      $('join').hidden = true; $('main').hidden = false;
+      document.documentElement.style.setProperty('--me', color);
+      $('meDot').textContent = me.name[0].toUpperCase(); $('meName').textContent = me.name;
+      setConn(true, m.hostOnline);
+      wakeLock();
+      return;
+    }
+    if (m.t === 'hostOnline') { setConn(true, m.on); return; }
+    if (m.t === 'state') { state = m.s; render(); return; }
+    if (m.t === 'points') { showPop(m.text); return; }
+    if (m.t === 'kicked' || m.t === 'closed') { me.id = null; store.set('id', ''); stopMic(); location.reload(); }
+  }
+
+  function setConn(ok, hostOn = true) {
+    const c = $('conn');
+    c.textContent = !ok ? 'Reconnecting…' : hostOn ? 'Connected · room ' + me.room : 'Connected · waiting for the board…';
+    c.classList.toggle('bad', !ok || !hostOn);
+  }
+
+  // ---------- Pantalla ----------
+  function render() {
+    const s = state; if (!s) return;
+    const mine = s.mode === 'turns' ? s.turn === me.id : true;
+    const singing = s.playing && mine;
+    const st = $('status'), tn = $('turn');
+    if (s.mode === 'turns') {
+      const cur = s.players.find(p => p.id === s.turn);
+      if (s.turn === me.id) { st.textContent = s.playing ? 'Sing now!' : 'Your turn'; tn.textContent = 'YOUR TURN! 🎤'; tn.className = 'turn mine'; }
+      else {
+        st.textContent = s.next === me.id ? 'You’re next — get ready' : 'Listen and wait';
+        tn.textContent = cur ? cur.name + ' is singing' : 'Waiting…'; tn.className = 'turn';
+      }
+    } else {
+      st.textContent = s.playing ? 'Everybody sing!' : 'Get ready to sing';
+      tn.textContent = ''; tn.className = 'turn';
+    }
+    st.classList.toggle('go', singing);
+    $('mic').classList.toggle('wait', !mine);
+    // Línea actual con mis palabras acertadas
+    const ly = $('lyric');
+    if (s.line && s.line.words?.length) {
+      const hits = new Set((s.hits && s.hits[me.id]) || []);
+      ly.innerHTML = s.line.words.map((w, i) => `<span class="${hits.has(i) ? 'hit' : ''}">${esc(w)}</span>`).join(' ');
+      ly.hidden = false;
+    } else ly.hidden = true;
+    // Marcador
+    const meRow = s.players.find(p => p.id === me.id);
+    if (meRow) {
+      $('meScore').textContent = meRow.score;
+      lastScore = meRow.score;
+    }
+    const top = [...s.players].sort((a, b) => b.score - a.score).slice(0, 5);
+    $('board').innerHTML = top.map((p, k) => `<div class="row ${p.id === me.id ? 'meRow' : ''}"><b>${k + 1}</b><i style="background:${p.color}"></i><span>${esc(p.name)}</span><b>${p.score}</b></div>`).join('');
+  }
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  function showPop(text) {
+    const d = document.createElement('div'); d.className = 'pop'; d.textContent = text;
+    document.body.append(d); setTimeout(() => d.remove(), 1300);
+    if (navigator.vibrate) navigator.vibrate(40);
+  }
+
+  // ---------- Micrófono / reconocimiento de voz ----------
+  let rec = null, running = false, lastSent = 0, pending = null, hearTimer = 0;
+  $('mic').onclick = () => (wantMic ? stopMic() : startMic());
+
+  function startMic() {
+    if (!Rec) { $('hint').textContent = 'Speech recognition isn’t available here. Try Chrome (Android) or Safari (iPhone).'; return; }
+    wantMic = true;
+    $('mic').classList.add('on');
+    $('hint').textContent = 'Mic on. Sing close to the phone.';
+    begin();
+    sendMic(true);
+  }
+  function stopMic(silent) {
+    wantMic = false;
+    $('mic').classList.remove('on', 'hearing');
+    if (!silent) $('hint').textContent = 'Tap the microphone to turn it on.';
+    try { rec?.stop(); } catch (e) { /* ignore */ }
+    sendMic(false);
+  }
+  function begin() {
+    if (running || !wantMic) return;
+    rec = new Rec();
+    rec.lang = 'en-US';
+    rec.continuous = true;
+    rec.interimResults = true;
+    rec.maxAlternatives = 1;
+    rec.onstart = () => { running = true; };
+    rec.onresult = e => {
+      let text = '', final = false;
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        text += e.results[i][0].transcript + ' ';
+        if (e.results[i].isFinal) final = true;
+      }
+      text = text.trim();
+      if (!text) return;
+      $('heard').textContent = '“' + text + '”';
+      $('mic').classList.add('hearing');
+      clearTimeout(hearTimer); hearTimer = setTimeout(() => $('mic').classList.remove('hearing'), 900);
+      queue(text, final);
+    };
+    rec.onerror = e => {
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        $('hint').textContent = 'Allow the microphone for this page in your browser settings, then tap again.';
+        sendMic(false, e.error); stopMic(true);
+      } else if (e.error === 'network') {
+        $('hint').textContent = 'Speech recognition needs internet. Try mobile data.';
+        sendMic(false, 'network');
+      } else if (e.error === 'audio-capture') {
+        $('hint').textContent = 'No microphone found.'; stopMic(true);
+      }
+    };
+    rec.onend = () => { running = false; if (wantMic) setTimeout(begin, 250); };
+    try { rec.start(); } catch (e) { running = false; setTimeout(begin, 600); }
+  }
+  // Enviar como máximo ~4 veces por segundo; los resultados finales salen de inmediato.
+  function queue(text, final) {
+    pending = { text, final };
+    const now = Date.now();
+    if (final || now - lastSent > 250) flush();
+    else setTimeout(flush, 260 - (now - lastSent));
+  }
+  function flush() {
+    if (!pending || ws?.readyState !== 1) return;
+    ws.send(JSON.stringify({ t: 'speech', text: pending.text, final: pending.final }));
+    lastSent = Date.now(); pending = null;
+  }
+  function sendMic(on, err) { if (ws?.readyState === 1) ws.send(JSON.stringify({ t: 'mic', on, err: err || '' })); }
+
+  // Que la pantalla del celular no se apague mientras cantan.
+  async function wakeLock() {
+    try { if ('wakeLock' in navigator) { const l = await navigator.wakeLock.request('screen'); document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') wakeLock(); }, { once: true }); } } catch (e) { /* ignore */ }
+  }
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && wantMic && !running) begin(); });
+})();
+</script>
+</body>
+</html>
