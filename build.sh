@@ -72,6 +72,7 @@ version_only planetcat    planetcat        # https://gato-swing.onrender.com
 version_only phrasal-gp   phrasalgp        # https://phrasal-gp.onrender.com
 version_only eye-of-the-beholder beholder  # https://eye-of-the-beholder.onrender.com
 version_only SharkBait    sharkbait        # https://shark-bait-j1hs.onrender.com
+version_only TheSyntaxCLub syntaxclub     # https://the-syntax-club.onrender.com
 
 # Versión de cada juego (el hub muestra "ACTUALIZADO" en la tarjeta)
 echo "{${VERSIONS%,}}" > versions.json

@@ -478,6 +478,15 @@ const GAMES = [
     tags:{ es:["Piratas","Votación en grupo"], en:["Pirates","Class vote"] },
     desc:{ es:"Cada prisionero cuenta su historia de tres formas y solo una está en buen inglés. La tripulación vota desde el celular: si suficientes aciertan, se salva… si no, ¡a los tiburones! Al final, temas fuertes y temas a repasar.",
            en:"Each prisoner tells their story three ways and only one is proper English. The crew votes from their phones: if enough get it right, the prisoner is saved… if not, feed the sharks! At the end, strong topics and topics to review." } },
+  { id:"syntaxclub", name:"The Syntax Club", url:"https://the-syntax-club.onrender.com/",
+    cat:"learn", play:"phone", learn:{ es:"Orden de adjetivos y gerundio vs infinitivo (B1)", en:"Adjective order and gerund vs infinitive (B1)" },
+    wake:"https://the-syntax-club.onrender.com/healthz",     // servicio propio en Render: el hub lo despierta al abrir
+    ver:"syntaxclub",
+    accent:"#d9a441", accent2:"#2f7a4f", video:"", voice:"syntaxclub",
+    cover:"img/syntax-club-card.webp", logo:"img/syntax-club-logo.webp", hero:"img/syntax-club.webp",
+    tags:{ es:["Club de jazz","Cartas en el celular"], en:["Jazz club","Cards on your phone"] },
+    desc:{ es:"Un club de jazz de los años 20 donde perros juegan cartas con un crupier bóxer. Cada estudiante tiene sus cartas en el celular y arma una oración alrededor de la palabra de la mesa.",
+           en:"A 1920s jazz club where dogs play cards with a Boxer dealer. Each student holds their cards on their phone and builds a sentence around the core word on the table." } },
   { id:"duelarena", name:"Duel Arena", url:"duelarena/",
     cat:"learn", play:"both", learn:{ es:"Gramática por temas, con retroalimentación al final", en:"Grammar by topic, with feedback at the end" },
     accent:"#8f6bff", accent2:"#ffd36b", video:"", voice:"duelarena",
@@ -1294,6 +1303,7 @@ select(0,true);
 <script>
 /* Voces del anunciador (archivos en media/voz/; se descargan solo cuando hacen falta) */
 window.VOICES={
+  syntaxclub:"media/voz/syntaxclub.mp3",
   syntcore:"media/voz/syntcore.mp3",
   sharkbait:"media/voz/sharkbait.mp3",
   gosnail:"media/voz/gosnail.mp3",
