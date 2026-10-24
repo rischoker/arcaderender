@@ -17,6 +17,7 @@ Hub de juegos estilo consola + servidor que sirve todos los juegos desde un solo
 | `eye-of-the-beholder.onrender.com` | Eye of the Beholder | servicio propio en Render (el hub enlaza y lo despierta) |
 | `shark-bait-j1hs.onrender.com` | SharkBait! | servicio propio en Render (el hub enlaza y lo despierta) |
 | `the-syntax-club.onrender.com` | The Syntax Club | servicio propio en Render (el hub enlaza y lo despierta) |
+| `monkeyrail.onrender.com` | MonkeyRail | servicio propio en Render (el hub enlaza y lo despierta) |
 | `/duelarena/` | Duel Arena | con servidor (celulares en `/duelarena/play.html`) |
 
 ## Publicar en Render (Web Service)

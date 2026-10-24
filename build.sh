@@ -68,6 +68,7 @@ for d in flappyverbs wordclimbers gosnailgo syntcore apps/castlequest apps/duela
 # Juegos en su propio servicio de Render (solo versión para la cinta "ACTUALIZADO")
 version_only ChickenHorde chickenhorde     # https://chicken-horde.onrender.com
 version_only Battlecity   battlecity       # https://battlecity-fl0l.onrender.com
+version_only MonkeyRail   monkeyrail       # https://monkeyrail.onrender.com
 version_only planetcat    planetcat        # https://gato-swing.onrender.com
 version_only phrasal-gp   phrasalgp        # https://phrasal-gp.onrender.com
 version_only eye-of-the-beholder beholder  # https://eye-of-the-beholder.onrender.com

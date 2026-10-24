@@ -437,6 +437,15 @@ const GAMES = [
     tags:{ es:["Tanques","Cooperativo"], en:["Tanks","Co-op"] },
     desc:{ es:"Tanques low-poly en equipo: protejan la base del águila contra oleadas de enemigos.",
            en:"Low-poly tank teamwork: protect the eagle base from waves of enemies." } },
+  { id:"monkeyrail", name:"MonkeyRail", url:"https://monkeyrail.onrender.com/",
+    cat:"fun", play:"phone",
+    wake:"https://monkeyrail.onrender.com/healthz",          // servicio propio en Render: el hub lo despierta al abrir
+    ver:"monkeyrail",
+    accent:"#ffc928", accent2:"#d9702a", video:"", voice:"monkeyrail",
+    cover:"img/monkeyrail-card.webp", logo:"img/monkeyrail-logo.webp", hero:"img/monkeyrail.webp",
+    tags:{ es:["2 monos por carrito","Hasta 8 jugadores"], en:["2 monkeys per cart","Up to 8 players"] },
+    desc:{ es:"Carrera en carritos banana por una mina: un mono acelera, el otro frena y los dos saltan juntos. ¡Una roca gigante los persigue y gana el último carrito en pie!",
+           en:"A banana-cart race through a mine: one monkey hits the gas, the other brakes, and both jump together. A giant rock is chasing everyone, and the last cart standing wins!" } },
   { id:"flappy", name:"Flappy Verbs", url:"flappyverbs/",
     cat:"learn", play:"phone", learn:{ es:"Verbos irregulares: pasado y participio", en:"Irregular verbs: past & past participle" },
     accent:"#ffd60a", accent2:"#5fe04a", video:"", voice:"flappy",
@@ -1303,6 +1312,7 @@ select(0,true);
 <script>
 /* Voces del anunciador (archivos en media/voz/; se descargan solo cuando hacen falta) */
 window.VOICES={
+  monkeyrail:"media/voz/monkeyrail.mp3",
   syntaxclub:"media/voz/syntaxclub.mp3",
   syntcore:"media/voz/syntcore.mp3",
   sharkbait:"media/voz/sharkbait.mp3",
